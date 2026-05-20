@@ -1,0 +1,1256 @@
+\documentclass[10pt, frontgrid, backgrid]{flacards}
+\usepackage[]{bookmark}
+
+\begin{document}
+\pagesetup{2}{3} 
+\renewcommand{\frfoot}{}
+\renewcommand{\brfoot}{}
+\renewcommand{\cardtextstylef}{\huge\sc}
+\renewcommand{\cardtextstyleb}{}
+
+\newcommand{\TiltCond}[2]{
+   
+   \renewcommand{\flhead}{{\textsc{Condition}}}
+   \renewcommand{\frhead}{{\textsc{Tilt}}}
+   \renewcommand{\brhead}{{\textsc{Tilt}}}
+   \renewcommand{\blhead}{\textsc{Condition}} 
+   \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+    \renewcommand{\frhead}{}
+    \renewcommand{\brhead}{}
+}
+
+\newcommand{\TiltBCond}[2]{
+    \renewcommand{\flhead}{{\textsc{Condition \textendash\, Boon}}}
+    \renewcommand{\frhead}{{\textsc{Tilt}}}
+    \renewcommand{\brhead}{{\textsc{Tilt}}}
+    \renewcommand{\blhead}{\textsc{Condition \textendash\, Boon}}
+    \renewcommand{\brfoot}{\textsc{Boon Conditions do not provide Beats}}
+    \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+    
+    \renewcommand{\brhead}{}
+    \renewcommand{\frhead}{}
+    \renewcommand{\brfoot}{}
+}
+
+
+\newcommand{\Cond}[2]{
+   
+   \renewcommand{\flhead}{{\textsc{Condition}}}
+    \renewcommand{\blhead}{\textsc{Condition}} 
+   \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+}
+
+\newcommand{\Tilt}[2]{
+  \renewcommand{\flhead}{{\textsc{Tilt}}}
+    \renewcommand{\blhead}{\textsc{Tilt}}
+    \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+}
+
+\newcommand{\BCond}[2]{
+    \renewcommand{\flhead}{{\textsc{Condition \textendash\, Boon}}}
+    \renewcommand{\blhead}{\textsc{Condition \textendash\, Boon}}
+    \renewcommand{\brfoot}{\textsc{Boon Conditions do not provide Beats}}
+    \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+    
+    
+    \renewcommand{\brfoot}{}
+}
+
+\newcommand{\TCond}[2]{
+    \renewcommand{\flhead}{{\textsc{Condition \textendash\, Tainted}}}
+    \renewcommand{\blhead}{\textsc{Condition \textendash\, Tainted}}
+    \renewcommand{\brfoot}{\textsc{Tainted Conditions do not provide Beats}}
+    \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+    
+    
+    \renewcommand{\brfoot}{}
+}
+
+\newcommand{\OCond}[2]{
+    \renewcommand{\flhead}{{\textsc{Condition \textendash\, Object}}}
+    \renewcommand{\blhead}{\textsc{Condition \textendash\, Object}}
+    \renewcommand{\brfoot}{\textsc{Inanimate objects cannot gain beats.}}
+    \card{
+        #1
+    }{%
+        
+        \large\pdfbookmark[2]{#1}{#1}\center{\textbf{\sc #1}}\\ 
+        \flushleft\normalsize #2
+    }%
+    
+    
+    \renewcommand{\brfoot}{}
+}
+
+\newcommand{\fillunderline}{\leaders\hbox{\_}\hfill \hphantom{1}}
+
+%Tainted conditions: Do not grant beats
+%As Persistent: Some conditions are designed to be used as both temporary and persistent. Convert resolution into beats, and use (as persistent) as resolutions. 
+%Boon: Do not grant beats
+
+
+% With their magical powers Princesses can often apply conditions to people as quickly as one two three. This can lead to a lot of duplicate conditions. Unless it is stated otherwise when a condition is duplicated only one instance of the condition remains. As a general rule, if the condition is a positive thing the affected character chooses which instance remains. If it is negative the player (or storyteller) inflicting the condition chooses which one they consider worse. 
+
+%Variable: The condition can applies to a verity of things. You may have this condition multiple times providing each instance of the condition applies to different things. E.G. you may have both Advised (science exam) and Advised (school bullies) but you could not have Advised (school bullies) twice. Conditions without the Variable keyword cannot be stacked, but one instance of the condition may be expanded to apply to a wider situation. For example Adult Supervision is one Condition even when it applies to mum, dad, and the occasional babysitter. 
+
+% Duplicable: It is possible to have multiple identical instances of this condition. As always, a character can only get one Beat from Conditions in a scene but all other effects of the condition can apply multiple times if it is appropriate. 
+
+%If a character gets two identical (or near identical, such as Floating Enchantments with overlapping affected traits) the usual rules for duplicated conditions apply. 
+
+% Some Conditons are marked with Tilt in the top right, these Conditions can be either a Condition or a Tilt depending on circumstances. A Condition that grants +1 Strength in an athletics contest would be a Tilt during a street brawl. Some causes of the Condition will expicitly say to use it as a Tilt, but others will require Storyteller judgement. 
+
+%\Cond{Abdicated (Persistent)}
+%{Your character has been crushed by the weight of her crown, so she has taken it of. She refuses to believe that she is a Princess. She might accept that she used to be a Princess but she might refuse to believe that Princesses %or magic even exist, referring to it as a childish game or an urban legend.
+
+%Until she reclaims her crown your Character cannot Transform, use Bequests or Practical Magic. She still suffers from Sensitivity though.\\
+%\textbf{Beat:} Your suffers a significant hardship because she lacks her magic. \\
+%\textbf{Beat:} Your character fails to seize on an opportunity to further an Aspiration or Dream because she lacks her magic. \\
+%\textbf{Resolution:} The character confronts and overcomes the trauma that caused her to abdicate.\\
+%\textbf{Resolution:} The character performs an act of heroism that reaffirms her desire and ability to help others.\\
+%\textbf{Resolution:} The character gains a dot of Belief.}
+
+
+\Cond
+{Abject Denial}
+{Your character witnessed an act of cruelty so terrible she refuses to accept such a thing is even possible. She must flee immediately from the perpetrator, the victim and any clear reminders of the crime and its results. If she is forced to confront them all rolls take a penalty of Shadows until she escapes the area.  \\
+\textbf{Resolution:} The scene ends. 
+}
+
+\Cond
+{Abdicated (Persistent)}
+{The Princess has abandoned her duties to the Light. She cannot peruse any action that falls under the purview of her calling without spending a point of Willpower, at which point she is free do so for the remainder of the scene. If the Princess is forced to perform relevant actions, such as a Champion who's attacked and must defend herself she subtracts her Shadows from all relevant rolls. Again a point of Willpower can remove the penalties.
+\textbf{Resolution:} The Princess achieves an exceptional success on an action related to her Calling
+\textbf{Resolution:} The Princess gains or loses a Dot of Belief. 
+}
+
+
+\Cond
+{Adult Supervision (Persistent)}
+{Your character is expected to follow rules set by an older authority figure, who probably dose not realise she is a Princess and would most likely be horrified to learn about dangerous activities such as fighting Darkspawn. \\
+
+The strictness of the rules placed upon a Princess depends on the her age, cultural norms and the individual personality of her supervisor. An exceptionally young Princess may be forbidden to leave the house alone, but a slightly older Noble may be given a free reign providing she is back by dinner and remains reachable by phone.\\
+\textbf{Beat:} The character suffers a significant hardship because of the rules set down by her guardian.\\
+\textbf{Beat:} The character breaks the rules and faces a significant punishment.\\
+\textbf{Resolution:} The character acquires independence.\\
+\textbf{Resolution:} The guardian learns of her activities and is convinced to be supportive (consider buying a dot in Mentor).
+}
+
+\Cond
+{Advised (Variable)}
+{Your character has consulted someone of exceptional skill and knowledge upon a problem. Perhaps one of the Queens, who are nothing short of demi-goddesses with lifetimes of experience. It could also be one of the greatest native Dreamlanders, a living avatar of the sum of mankind's knowledge on a topic. Even an exceptional mortal along the lines of Sherlock Holmes would qualify.\\
+\textbf{Resolution:} When your character is confronted with a problem she has received advice on she can cash in the advice, replacing one roll with automatic successes. If the advice came from a person represented by the Mentor merit the character gains one success per dot of Mentor, otherwise the storyteller must decide.\\
+\textbf{Topic:} \fillunderline \\
+\textbf{Bonus Successes:} \_\_\_\_\_\_\_\_
+}
+
+\BCond
+{Alert}
+{Your character has entered a state of heightened awareness and no detail escapes her sight. \\
+\textbf{Cash In:} Your character converts a failed Perception roll to a Success or a successful Perception roll into an Exceptional Success. This cannot be used on contested rolls.\\
+\textbf{Cash In:} Your character gains +2 dice to a Contested Perception roll.}
+
+\BCond
+{Bargain (Variable)}
+{Your character has a one time way of making a purchase at exceptional prices. Maybe they just have a coupon for a discount. Perhaps some televisions have \textquotedblleft fallen of the back of a lorry\textquotedblright, but hurry while stocks last. 
+
+This Condition reduces the Availability of an item by one dot.\\
+\textbf{Cash in:} Your character acquires goods or services a discounted Availability. \\
+\textbf{Applicable purchases:}\fillunderline}
+
+\Cond
+{Befriendable}
+{
+Your character's ideals have been shaken, and now she is reaching out for advice and guidance. Her new open mindedness can result in good or ill. \\
+\textbf{Resolution:} Increase your character's impressions of another by one level for their next attempt at Social Maneuvering. Your character's impressions remain artificially high until her last door is open or until the Social Manoeuvring concludes some other way. The chosen character must be one who's actions will introduce drama and plot complications to the story. 
+}
+
+\TiltBCond{Blessing (Persistent, Variable)}
+{Your character is enchanted by magic which increases her abilities. This might apply to a named trait, a category of traits, or a speciality like field that works across skills.\\
+\textbf{Ending the condition:} Blessings are temporary, and vanish after a while.\\
+\textbf{Ending the condition:} Some blessings end when a certain condition is met.\\
+\textbf{Affected trait:}\fillunderline\\
+\textbf{Increase:}\_\_\_\_\_\\
+\textbf{Duration:}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\textbf{End trigger:}\fillunderline}
+
+\Cond{Burden of Leadership (Persistent)}
+{The Princess has donned the Mantle of Hearts, and the responsibility to be a paragon of morality that her people may guide themselves by. 
+
+The Princess gains 8again on Sensitivity rolls when the victim or the perpetrator is someone blessed by this Charm. In addition, if anyone blessed by this Charm causees her to face a Belief compromise through setting a Bad Example, she does not halve or double the perpetrator's modifier when making her own Comrpomise roll.\\
+
+\textbf{Beat:} The Princess suffers from Sensitivity or loses a dot of Beleif because of this condition. (For Compromise rolls, roll the lost dice separately to see if this Condition is responsible.) \\
+
+\textbf{Ending the condition:} The Condition fades at the end of the scene. This does not grant a Beat.}
+
+\Cond
+{Body Dysmorphia (Persistent)}
+{
+Your character does not feel comfortable in her mundane identity. She might have body image issues, be transsexual or feel incomplete without her Transformed Abilities and skills. Choose triggers that are appropriate for your character such as hearing insults about her weight or failing a roll in a certain skill. When this happens your character immediately excuses herself to Transform and tries to remain Transformed for the rest of the scene unless she Succeeds on a Resolve + Composure roll. \\
+\textbf{Beat:} Your character gets into trouble because she had to Transform at an inappropriate time. \\
+\textbf{Beat:} Your character gets into trouble from trying to move part of her mundane life to her transformed identity. \\
+\textbf{Resolution:} Your character receives therapy or surgery and becomes comfortable in her mundane identity. \\
+\textbf{Resolution:} Your character joins the Court of Mirrors and removes any need for her Mundane identity. 
+}
+
+%\Cond
+%{Cracked Confidence}
+%{
+
+%Your character is verging on the edge of a Belief Compromise. Somebody who knows why can push her over the edge. When they try make a contested social roll with a the attackers' threshold being the Princesses' Belief + Composure and the Princess' being the attacker's dice pool. Roll once per turn, and if the attacker reaches the threshold first, make a Compromise roll.\\
+%\textbf{Resolution:} Win or loose, Resolve the Condition after a contested social roll. \\
+%\textbf{Resolution:} The Princess deals with her underlying issue. \\
+%\textbf{Resolution:} Gain or loose a dot of Belief.  
+%}
+
+\BCond{Cloak of Shadows (Persistent)}
+{Your character has become a being of living shadow. She is an Ephemeral Being, similar enough to Ghosts to touch and be touched, but she is permanently Manifested without the need for a Condition. The Princess does not gain Influences or Manifestations but she may use her Charms, except Perfect Charms which do not work on her shadow-body.
+
+The Princess may attack others by rolling Strength + Lacrima, she does Lethal damage but a successful attack also drains a point of Willpower. She may also speak as normal, her strange form grants a Lacrima bonus to Intimidation. The Princess also has all the Benefits of the Darkened Template, but she uses the Noble rules for Sensitivity. 
+
+\textbf{Ending the Condition:} Strong light can harm the Princess, as can magic. If she takes more than 3 damage from a single action she reverts to her Transformed identity and loses a point of Willpower from shock. }
+
+\Cond{Courpted Eye (Persistent)}
+{A magical being has taken your sight for it's own. You can still see fine but be warned, anything you can see it can see. \\
+\textbf{Ending the Condition:} Magic will fade in time. \\
+\textbf{Beat:} Your sight is used against you.\\
+\textbf{Resolution:} Magic fades in time.\\
+\textbf{Who stole your sight:} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Duration:} \_\_\_\_\_\_\_\_\_\_ }
+
+\TCond{Cursed (Persistent, Variable)}
+{
+Your character is enchanted by magic which decreases her abilities. This might apply to a named trait, a category of traits, or a speciality like field that works across skills.
+
+If a Curse reduces an Attribute to zero then all rolls using that attribute automatically fail, in addition to roleplaying considerations. Supernatural abilities powerful enough to do this will explicitly state so in their description.\\
+\textbf{Beat:} The character fails a significant roll because of this Condition (roll the missing dice separately).\\
+\textbf{Resolution:} Curses are temporary, and vanish after a while.\\
+\textbf{Resolution:} Some curses have an escape condition which end the curse as soon as it is fufilled.\\
+\textbf{Escape Clause:}\fillunderline\\
+\textbf{Affected trait:}\fillunderline\\
+\textbf{Decrease:}\_\_\_\_\_ \\
+\textbf{Can reduce Attributes to zero?:} \underline{Y/N}
+}
+\Cond{Confused}
+{Your character is a bit unsure about what's going on, perhaps he is busy trying to survive while processing the existence of vampires. Perhaps a con-artist just pulled the wool over his eyes. Regardless of why, poor information leads to poor decisions.\\
+\textbf{Causing the Condition:} Chaotic circumstances beyond what your character faces in day to day life can be confusing. \\
+\textbf{Causing the Condition:} An Exceptional Success on a subterfuge roll can often inflict this condition. \\
+\textbf{Resolution:} Your character makes a bad decision because of his poor information. \\
+\textbf{Resolution:} Your character discovers appropriate facts and gets to grips with the situation. 
+}
+
+\OCond
+{Consecrated (Persistent)}
+{
+The area has be saturated with Noble magic, and serves as a foundation for certain Charms. The benefits are listed on the Charms themselves. Only the Princess(es) responsible for Consecrating a place may use it to enhance their Charms, but other Princesses can do so with her help.\\
+\textbf{Causing the Condition:} The Palace Merit or Charm Consecrate can Consecrate ground. \\
+\textbf{Ending the Condition:} Unconsciously consecrated ground will fade if the bond of intimacy is disrupted. \\
+\textbf{Ending the Condition:} If the Condition was created by Charm Consecrate it may expire after some time. \\
+\textbf{Ending the Condition:} A Tainting ends the condition. \\
+\textbf{Ending the Condition:} Suppressed Taint can slowly erode the Condition. \\
+\textbf{Duration:}  \_\_\_\_\_\_\_\_\_\_\_ \textbf{Activation Sucesses:} \_\_\_\_\_\_\_\_\_\_\_\\
+\textbf{Supressed Taint:} \_\_\_\_\_\_\_\_\_\_\_ \textbf{Sanctuary:} \underline{Y/N} }
+
+\OCond{Dark Lure (Persistent)}
+{The object has become irresistible to Creatures of the Darkness. Every Creature of the Darkness within the affected area must make a Resolve + Composure - activation successes roll or immediately try to acquire the object. 
+
+If the condition has the destructive modifier, the monsters instead try to destroy it rather than acquire it. \\
+
+\textbf{Ending the Condition:} The scene ends. \\
+\textbf{Lure radius:} \_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Activation Successes:} \_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Destructive:} \underline{Y/N} }
+
+\OCond{Daydreaming Zone}
+{The area has been saturated with the raw power of the Dreamlands. Any Dreamlanders in the area gain the Materialise Manifestation, while materalised treat them as though they were in the Dreamlands for all rules purposes. In addtion Breaking Point and Comrpomise rolls gain a +1 bonus.\\
+\textbf{Causing the Condition:} Only Ambassadors to the Dreamlands can cause this Condition\\
+\textbf{Ending the Condition:} The Ambassador ends the effect. }
+
+\Cond{Depression (Persistent)}
+{Your character is suffering from depression. 
+
+Whenever your character fails a roll which is important to achieving an Aspiration (including variants such as Dreams) roll Resolve + Composure, on a failure loose a point of Willpower and you can neither spend nor regain Willpower for the rest of the scene. \\
+
+\textbf{Beat:} Your character succumbs to a bout of depression. \\
+\textbf{Beat:} Your voluntary declare your character has a bout of depression. This only grants beats when the hardship is significant. The hardship includes more than the lost Willpower, such as declaring your character does not to peruse an opportunity because of her depression.\\
+\textbf{Resolution:} Gain a dot of Integrity (or equivalent)\\
+\textbf{Resolution:} Roll an Exceptional Success on a Breaking Point (or equivalent)\\
+\textbf{Resolution:} Therapy, medication or a significant lifestyle change overcomes the fog of depression. 
+}
+
+\Cond{Dissociation (Persistent)}
+{Your character did something so terrible that she refuses to accept it. Instead she separates her two identities, using one to shield the other. Every time the Princess transforms into her guilty identity (whichever one committed the act) lose one point of Willpower. In addition neither identity are able to remember what they did while in the other identity.\\
+\textbf{Beat:} Your character gets into trouble because she could not remember something. \\
+\textbf{Resolution:} The character admits to her crime and makes amends.\\
+\textbf{Resolution:} The character gains a dot of Belief.}
+
+\Cond{Dominated (Persistent)}
+{Your character has come under the mental domination of another and will obey their orders. She may still refuse orders that violate their sense of self (anything that would be a Breaking Point or Beleif Compromise) unless this condition has the Unethical modifier. She may also refuse orders that pose a significant risk of harm to herself, unless this Condition has the Suicidal Modifier. If the modifiers are partial, then your character may roll to contest those orders. She must beat the origonal activation successes using the same traits she used to resist the mental domination magic.\\
+
+\textbf{Beat:} Your character suffers a significant hardship during her service. \\
+\textbf{Resolution:} The magic wears off or is broken.\\
+\textbf{Loyal to:}\fillunderline\\
+\textbf{Duration:}\fillunderline\\
+\textbf{Unethical:} \underline{Y/N/Partial}\\
+\textbf{Suicidal:} \underline{Y/N/Partial}}
+
+\Cond
+{Doubting (Persistent)}
+{
+The character’s higher calling or guiding principle has been put in question, and she is beset by doubts. While the character is affected by this Condition, she cannot spend Willpower on any action that simultaneously reflects both her Beliefs and her Calling.\\
+\textbf{Resolution:} An exceptional success on a roll in which the Princess cannot spend Willpower. 
+\textbf{Resolution:} A Success or Exceptional on a Compromise roll}
+
+\Cond
+{Drama Queen}
+{Your character must always be in the centre of attention; whenever she is in a situation where somebody other than herself has the limelight she is compelled to act out. \\
+\textbf{Resolution:} Your character acts out inappropriately and causes a scene.\\
+\textbf{Resolution (as Persistent):} Your character confronts her inner insecurities and learns that the respect of the world is worth less than self respect. 
+}
+
+\OCond{Draining Hex}
+{The object has been hexed and drains the will of everyone nearby. Once per scene any mortal who remains within five yards for an hour or more must roll Resolve vs the hexes potency. If they fail a point of Willpower is transferred into the Hex's pool. If the pool is full the hex it has no effect. 
+
+Any Creature of the Darkness can use the Enervation Caligo to drain Willpower points from the hex.\\
+
+\textbf{Willpower pool:} \_\_\_\_ / \_\_\_\_\\
+\textbf{Potency:} \_\_\_\_}
+
+\Cond{Entwined (Persistent)}
+{Your character has been magically linked to another and may be affected by magic across any distance, of course such links work in both directions. \\
+\textbf{Beat:} Your character suffers a significant hardship because of long distnace magic.\\
+\textbf{Resolution:} The magic that forms such links is temporary and will fade in time. \\
+\textbf{Resolution:} Like most persistent magical effects, these links can be broken with counter magic. \\
+\textbf{Linked to:}\fillunderline \\
+\textbf{Link strength:}\fillunderline \\
+\textbf{Lasts until:}\fillunderline 
+}
+
+\Cond{Embarrassing Phylactery (Persistent)}
+{Some Hopeful have a Phylactery which has an uplifting, even moral meaning to them personally but if presented in public causes nothing but trouble. This may be because the Princess is from an oppressed minority group and her Phylactery is a symbol of her people. It could be because her Phylactery has a different meaning to different cultures, because her Phylactery has an obviously magical or Princessey experience, or because her Phylactery isn't appropriate for her age, social standing or gender.\\ 
+\textbf{Beat:} Your character suffers a significant hardship because of reactions to her Phylactery.\\
+\textbf{Beat:} Your character's attempts to conceal her Phylactery causes her a significant hardship.\\
+\textbf{Resolution:} At the player's discretion a major life event may reshape the Phylactery. 
+}
+
+\Cond{Enervated (Persistent)}
+{The character is in the second stage of soul loss. Her instinctive efforts to shore up her Willpower by giving into her urges have failed, her Integrity has gone and her Willpower is now fading. In addition to the effects of Soulless, she can no longer regain Willpower through her Virtue, only her Vice. Indulging herself brings diminishing returns — whenever she does so, her permanent Willpower drops by one dot before she regains Willpower points to the new maximum.\\ 
+\textbf{Beat:} Loose a dot of willpower.\\
+\textbf{Resolution:} Regaining a lost soul; returning to Belief 1. 
+}
+
+\TiltBCond{Floating Blessing (Persistent, Variable)}
+{Your character is enchanted by magic which will temporally increases her abilities when she needs it. This might apply to a named trait, a category of traits, or a speciality like field that works across skills. It never applies to chance dice.\\
+\textbf{Cash in:} On any roll using the traits affected by the enchantment you may remove dice from your Floating Dice Pool and add them to your roll. You may transfer up to five dice, but once they're gone they're gone.
+The enchantment can also decrease an attackers dice pool by increasing attributes that subtract from the attacker's dice pool. Each reduction affects one roll.  \\
+\textbf{Ending the condition:} Most enchantments that grant Floating Dice wear off after a while, any remaining dice in the Floating Dice Pool are lost.\\
+\textbf{Affected traits:}\fillunderline\\
+\textbf{Dice remaining:}\_\_\_\_\_ \textbf{Duration:}\fillunderline}
+
+\TiltBCond{Floating Sucesses (Persistent, Variable)}
+{Your character is enchanted by powerful magic which grants automatic successes when she needs it. This might apply to a named trait, a category of traits, or a speciality like field that works across skills.\\
+\textbf{Cash in:} On any roll using the traits affected by the enchantment you may remove successes from your pool and apply automatic successes, in addition to your roll.
+The enchantment can also decrease an attackers dice pool by increasing attributes that subtract from the attacker's dice pool. Each reduction affects one roll.  \\
+\textbf{Ending the condition:} Most enchantments that grant Floating Dice wear off after a while, any remaining dice in the Floating Dice Pool are lost.\\
+\textbf{Affected traits:}\fillunderline\\
+\textbf{Successes remaining:}\_\_\_\_\_ \textbf{Duration:}\fillunderline}
+
+\BCond{Fortunate}{
+You have been blessed with a dollop of good fortune. A number of rolls are enhanced: \\
+
+\textbf{Benefit:} \underline{9again, 8again, rote} \\
+\textbf{Rolls remaining:} \_\_\_\_\_\\
+\textbf{Rolls affected:}\underline{All, Chosen}
+}
+
+\Cond{Fresh Impressions (Persistent)}
+{Magic has been used to change your character's impressions of another. Perhaps with your permission, for the head often knows better than the heart. 
+
+This Condition does not prevent later changes in opinion. \\
+
+\textbf{Beat:} Your character's new impressions are used to take advantage of her. 
+\textbf{Ending the Condition:} Magic will fade in time. \\
+\textbf{With who?} \fillunderline \\
+\textbf{New impression level:} \fillunderline \\
+\textbf{Duration:} \_\_\_\_\_ }
+
+\TCond
+{Fresh Shadows (Duplicable)}
+{Your character has experienced an episode of emotional turmoil and it has left a Shadow upon her soul. If she acts quickly the Shadow can be removed. \\
+\textbf{Resolution:} The Princess finds emotional closure. Perhaps she helps a victim of a cruel act or enforces justice upon the perpetrator \textendash\, Resolving this Condition removes a Dot of Shadows. \\
+\textbf{Ending the Condition:} The scene ends. }
+
+\Cond
+{Girl Underground}
+{During a moment of vulnerability the Dreamland's trap sunk it's hooks into you. When you next sleep you will enter the Dreamlands (uncovering a new Crawlspace entrance if there is none nearby) and you may not leave the Dreamlands without Resolving this Condition. \\
+
+\textbf{Resolution:} Remove a Dot of Shadows. \\
+\textbf{Resolution:} Earn at least five Beats after taking this Condition, and spend at least one experience on a trait that will help resolve the issue that led to this Condition. }
+
+\TCond
+{Ghost Shadows (Persistent)}
+{Your character has trapped a Darkspawn in her soul. This effectively gives her additional Shadows. \\
+\textbf{Remove Shadows:} Any event that removes a permament Shadow can remove a Ghost Shadow instead. The player chooses which kind is removed first.\\
+\textbf{Resolution:} At any time your Character can release all the Shadows into the world as Darkspawn (by default use the Stats for a shadow-wraith). You may even release them with a goal, roll Resolve + Composure, on a success they will attack a target of your choice unless their survival is in jeopardy. Releasing Darkspawn into the world is a Belief Compromise with a -4 penalty, unless you destroy them all in the current scene.\\ 
+\textbf{Number of Ghost Shadows:} \_\_\_\_}
+
+\Cond
+{Give them Cake}
+{It's simple, if people agree with you then you don't need to discuss anything and if they don't agree with you they're wrong so you can safely ignore them. \\
+\textbf{Resolution:} Your character gets into trouble or creates a conflict by ignoring other people's feelings and opinions. Or not bothering to learn them in the first place.\\
+\textbf{Resolution (as Persistent):} Your character confronts her inner insecurities and learns to listen to those around her.
+}
+
+\BCond{Guiding Light (Persistent)}
+{Your dreams serve as an inspiration to others. When you fulfil the affected Dream or Aspiration everyone who significantly helped you fulfil it this session takes a Beat, characters capable of having Dreams who help you fulfil a Dream also gain a Luminous Beat.\\
+
+\textbf{Ending the Condition:} When you fulfil the affected Aspiration or Dream, the condition ends. \\
+\textbf{Affected Aspiration/Dream} \fillunderline }
+
+\Cond
+{Guided}
+{Your character follows another. Their joy is your joy, their success is your successes. \\
+\textbf{Resolution:} When the one you are bonded to gains a Beat from an Aspiration, Dream, or an equivalent, take a Beat\\
+\textbf{Guided by:} \fillunderline}
+
+
+\Cond
+{Heavy Crown}
+{Your character has failed the people who depend upon her and feels that she is no longer worthy to lead. She suffers a dice penalty to all actions where other people depend on her success. -1 for five people or less. -2 for six to 15 people. -3 for 16 to 45 people, -4 for 46 to 100 people and -5 for anything over 100.\\
+\textbf{Resolution:} Your character succeeds on an important roll where people depend on her, at least as many people as she originally failed.\\
+\textbf{Resolution:} Your character fails an important roll with the above penalties.\\
+\textbf{Resolution (as Persistent):} Your character, and her people, learn her value as a leader with her imperfections. 
+}
+
+\Cond
+{Heartfelt Vow (Persistent)}
+{
+Your character’s Belief and magic rest on a great vow, which demands that she follow a specific code of conduct while acting as a champion of the Light. Her Charms fail to activate, or give no help to mundane actions, if the result of a success would break her vow. Moreover, if the Princess does break the vow, she must immediately return to her mundane form and cannot transform for the rest of the scene.\\
+\textbf{Resolution:} The Princess undergoes a moral crisis, resolves it by abandoning her vow. This requires a Belief Compromise. \\
+\textbf{Beat:} The Princess suffers a significant setback due to keeping her vow.}
+
+\BCond{Held Charm}
+{Your character has been enchanted with a Charm which will take effect only under certain conditions. While the Held Charm Condition does not provide Beats, the effects of the Charm can create a new Condition which just might do so. \\
+\textbf{Ending the Condition:} The condition takes place and the Charm performs it's usual effect, after using up any repetitions, and it is not renewable. \\
+\textbf{Ending the Condition:} The duration expires and the Charm is wasted. \\
+\textbf{Stored Effect:}\fillunderline \\
+\textbf{Activation conditions:}\fillunderline \\
+\textbf{Deactivation conditions:}\fillunderline \\
+\textbf{Charm's Activation Successes:}\_\_\_\_\_ 
+\textbf{Duration:}\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Repetitions:}\_\_\_\_\_ 
+\textbf{Renewable:}\underline{Y/N}}
+
+\Cond{Incredulous}
+{The character has considered, and rejected, the idea that a supernatural being is, in fact, supernatural. Any roll he makes to recognize the being as anything but a mundane human takes a -2 penalty. This Condition may be taken multiple times, each for a different supernatural.\\
+\textbf{Resolution:} The character discovers the supernatural being’s true status despite the penalty. 
+}
+
+\TiltBCond{Inflamed Will}
+{Your character's Willpower has been magically stoked to superhuman levels. \\
+\textbf{Cash In:} When spending point of Willpower to add dice to a roll, cash in a flame to increase it's effectiveness. \\
+\textbf{Ending the condition:} When the duration expires en the Condition, any remaining flames are lost. \\
+\textbf{Willpower bonus:} \_\_\_\_\\ 
+\textbf{Defensive Willpower bonus:} \_\_\_\_\\
+\textbf{Flames:} \_\_\_\_\\
+\textbf{Duration:} \_\_\_\_\_\_\_\_
+}
+
+\Cond{Interwoven (Persistent)}
+{Your character has been magically linked to a social group and falls under mystical effects that affect the group itself , of course such links work in both directions. \\
+\textbf{Beat:} Your character suffers a significant hardship because of group affecting magic.\\
+\textbf{Resolution:} The magic that forms such links is temporary and will fade in time. \\
+\textbf{Resolution:} Like most persistent magical effects, these links can be broken with counter magic. \\
+\textbf{Linked to:}\fillunderline \\
+\textbf{Link strength:}\fillunderline \\
+\textbf{Lasts until:}\fillunderline 
+}
+
+
+\TiltBCond{Inverse Blessing (Persistent, Variable)}
+{Your character is enchanted by magic which modifies people's ability to affect you. People may find their combat skills fading if they attempt to harm you or be unusually brilliant at choosing the right present for you.\\
+\textbf{Ending the condition:} Blessings are temporary, and vanish after a while.\\
+\textbf{Ending the condition:} Some blessings end when a certain condition is met.\\
+\textbf{Affected trait:}\fillunderline\\
+\textbf{Modifier:}\_\_\_\_\_\\
+\textbf{Duration:}\fillunderline\\
+\textbf{End trigger:}\fillunderline}
+
+\TCond{Inverse Curse (Persistent, Variable)}
+{Your character is enchanted by magic which modifies people's ability to affect you. People may find tormenting you to be unusually satisfying or know exactly what words will fill you with fear.\\
+\textbf{Ending the condition:} Curses are temporary, and vanish after a while.\\
+\textbf{Ending the condition:} Some curses end when a certain condition is met.\\
+\textbf{Affected trait:}\fillunderline\\
+\textbf{Modifier:}\_\_\_\_\_\\
+\textbf{Duration:}\fillunderline\\
+\textbf{End trigger:}\fillunderline}
+
+\Cond{Invocation Lock (Persistent)}
+{Each Queen has an Avatar Charm, and your character has just used one. She has become an exemplar of one Invocation, and cannot use any of the others. 
+
+She can still use Charms linked to other Invocations, she just cannot add dice to them through an Invocation.\\
+\textbf{Beat:} Your character faces a significant hardship because she cannot access other Invocations. \\
+\textbf{Ending the Condition:} The avatar Charm ends. (Do not grant a Beat)\\
+\textbf{Invocation:} \fillunderline}
+
+\Cond{It's Her Fault}
+{
+How could a perfect being like the True Heir fail? The only possibility is that she was too good, too nice, and offered friendship and mercy to someone who didn't deserve it. If the heir is to succeed she must ensure that this person (who in reality probably did nothing worse than offer helpful advice that contradicted the Brat's ideas or stood nearby at the wrong time) is unable to sabotage her again. \\
+\textbf{Resolution:} The Brat takes steps to ensure the target cannot \textquotedblleft sabotage\textquotedblright\, her again. For example she may ensure an erudite fails her exams so that everyone will know not to listen to her the next time she criticises the Brat's childish logic. Any Belief Compromises that result are measured as though the target was guilty of whatever the Brat accuses her off. \\
+\textbf{Resolution (when severe):} As above, but the Brat's retribution must be far more extreme. Such as permanently disfiguring the woman who \textquotedblleft tricked and seduced\textquotedblright\, the Brat's charming prince into her arms. 
+}
+
+\TCond{It Wasn't Necessary}
+{The Princess has suppressed her internal conflict and such problems tend to fester if they are not dealt with. Every time the Princess faces a Compromise roll (and doesn't invoke It Was Necessary) apply a -2 penalty and decrease the number of stacks by one. \\
+
+\textbf{Ending the Condition:} The condition ends when the number of stacks reaches zero. \\
+\textbf{Stacks:}\_\_\_\_}
+
+\BCond{Light's Unity (Persistent)}
+{The Queen of Hearts knows that when people are guided by a great leader, the fruits of their labours become greater than the sum of it's parts. Guided by Hearts' avatar, your character now knows this too. 
+
+Whenever you work as the primary actor in a Teamwork roll you gain a bonus equal to the number of secondary actors multiplied by the total number of actors (only actors with Light's Unity from the same Princess count) or the Condition's maximum, whichever is lower. (For example, in a team of 3, the 2 secondary actors will contribute three dice, for a total of six, in addition to the dice from their rolls.)
+This condition fades at the end of the scene.\\
+\textbf{Leading Princess:}\fillunderline\\
+\textbf{Maximum:}\_\_\_\_
+}
+
+\OCond{Line in the Sand (Persistent)}
+{The Princess has drawn a line, keeping watch for certain people. If one of those people cross the line, the Princess instantly knows about it. \\
+\textbf{Causing the Condition:} Only the Charm Laying Down The Line can cause this condition\\
+\textbf{Ending the Condition:} The charm expires. \\
+\textbf{Ending the Condition:} The physical form of the line is broken.\\
+\textbf{Targets:}\fillunderline \\
+\textbf{Duration:}\fillunderline }
+
+\BCond{Living Fulcrum (Persistent)}
+{The Avatar of Spades sits at the heart of all things, with the slightest touch she can unbalance the mightiest edifice. 
+
+At any time the Princess may spend one turn and roll a Finesse Attribute + an appropriate skill. Record the Successes, whenever the Princess wishes she may reflexively increase or decrease any dice pool by the stored Successes. The Storyteller is entitled to expect creativity, verity and a minimum of sense in the Princess' actions and how they affect her target. 
+
+The Princess may store a one roll per Aria and she may modify any number of rolls per turn but she may only apply one modifier to any given roll. 
+
+At the end of the scene the Condition fades, unspent modifiers are lost. \\
+\textbf{Stored Modifiers:} \fillunderline}
+
+
+\BCond{Living Library (Persistent)}
+{Knowledge is how we make the world better, and avatar of Diamonds is knowledge incarnate. 
+
+For topic covered by this Condition the Princess has the equivalent of a three dot Library upon that topic in her head. She may perform research rolls on those topics, with the usual library bonus, at a rate of one roll per turn. 
+
+At the end of the scene this Condition fades. The memory of the Princess' research remains, as well as any other memory would. \\
+
+\textbf{Topics:} \fillunderline\\\_\fillunderline\\\_\fillunderline}
+
+
+\OCond{Lucid Zone}
+{this area of the Dreamlands has been saturated with the solidity of the waking world. Everyone in the area resists the Gales automatically.
+\textbf{Causing the Condition:} Only Ambassadors to the Dreamlands can cause this Condition\\
+\textbf{Ending the Condition:} The Ambassador ends the effect.}
+
+\Cond{Luminous}
+{After sending a particularly large amount of her magic, her hopes and dreams, out into the world the Princess' Inner Light has become luminous. Leftover residue from her spell metaphorically sticks to her skin, lighting the world around her. The Princess, and people around her, find it easier to act upon their own hopes and dreams.  
+
+\textbf{Resolution:} Whenever someone within Inner Light * 10 yards of the Princess (including the Princess herself) performs a virtuous action (or not so virtuous, for Twilight Charms) that falls under the Duties of the Princess' Calling, they may cash in the Condition for a +1 bonus to the roll. If an Invocation was applied to the Charm the bonus increases to +2 if the act matches both the Queen and the Calling. Charms without an applied Invocation default to the Princess' liege. The Princess gets a Luminous Beat (not a regular Beat) no matter who gets the bonus.}
+
+%\TCond
+%{Memories of Failure}
+%{After failing to prevent an act of cruelty your character has become obsessed with her inability to prevent it and other similar cruelties. Anyone who brings up your character's past failures adds her Shadows to any social roll intended to dishearten her. \\
+%\textbf{Resolution:} The duration of the haunting ends. 
+%}
+
+\Cond
+{Mania}
+{Your character is awash with energy and cannot sit still. You take a -2 penalty to all rolls to resist impulsive behaviour or temptation, the penalty increases to -5 when the action in question aligns with your Vice. 
+\textbf{Resolution:} You suffer a significant drawback because you couldn't resist acting.}
+
+
+\BCond
+{Masquerade}
+{A magical illusion hides your character's supernatural nature. Any passive supernatural ability that can detect your innate supernatural nature  will automatically fail. Active supernatural abilities that can detect your supernatural nature must first defeat whomever blessed you with this condition in a Clash of Wills. Any ability which could detect you making active use of your own supernatural abilities functions as normal.
+\textbf{Ending the Condition:} The magical protection fades with time.\\
+\textbf{Duration:} \fillunderline \\
+\textbf{Clash of Wills Dice Pool:} \fillunderline}
+
+\Cond
+{Misled}
+{The character has been persuaded to believe something that isn’t actually true. When he is taking an action where the false belief could be relevant, you may choose to fail the roll and resolve this Condition. If the character discovers clear evidence that his belief is false, you may choose to shed the Condition without resolving it. \\
+\textbf{Resolution:} The character acts on his false belief and fails a roll as described.}
+
+\Cond
+{Mirror Blindness}
+{Looking into the mirror your character was struck blind by her own beauty and can no longer see her flaws. She can Compromise her own Beliefs without questioning herself, or even realising she has done so. The obvious drawback is that she is as likely to commit a serious Compromise that gets her into serious trouble than to get away with a minor Compromise that works to her benefit. \\
+\textbf{Resolution:} When your character Compromises her Beliefs you may cash in Mirror Blindness. Do not make a Compromise roll for your character does not realise her actions go against her own Beliefs. This applies even to ridiculously large leaps of logic. Your character could break her athletic rival's leg and not realise she's hurt her.}
+
+\TCond{Misfortunate}{
+You're character has been cursed with ill fortune. She does not gain 10again and subtracts any 1s from her Successes. Negative Successes become a Dramatic Failure. \\
+\textbf{Rolls remaining:} \_\_\_\_\_}
+
+\Cond
+{Name of the Moon}
+{In any conflict your character cannot use Bequests or Charms (but keeps effects that are already active) until she makes a speech about why she is fighting. This requires a minute of speaking, or a turn if she uses the Royal Tongue, and her opponents must be able to hear her speech.
+
+\textbf{Resolution:} Someone takes advantage of the character's speech to move against her.\\
+\textbf{Resolution:} The Princess ruins an ambush or gives up an advantage by announcing her presence.\\
+\textbf{Resolution (as Persistent):} At the player's discretion this Condition may be resolved any time she gains a dot of Belief. 
+}
+
+\Cond
+{Narcissism}
+{Your character believes the is the best, brightest and most special person in the world. She probably isn't, and her false confidence causes her to jump to conclusions and accept challenges beyond her capabilities. \\
+\textbf{Resolution:} Your character chooses to confront a problem she cannot handle, or goes unprepared to confront a problem she is only able to handle with proper preparation.\\
+\textbf{Resolution (as Persistent):} Your character confronts her inner insecurities and learns to accept herself and her limitations.
+}
+
+\OCond{Necropolis (Persistent)}
+{This area is a Necropolis, a paradise for ghosts. Any Ghost within the affected area does not suffer essence bleed, in addition when using Manifestations a Necropolis counts as an Anchor with the Open Condition. Finally all Ghosts within a Necropolis can use the Materialise Manifestation even if they do not have access to it normally. \\
+
+\textbf{Causing the Condition:} Only Governors of Amethyst can cause this condition\\
+\textbf{Ending the Condition:} The duration expires. \\
+\textbf{Duration:} \fillunderline \\
+\textbf{Area affected:} \fillunderline}
+
+\Cond
+{Nightmares (Persistent)}
+{Your character has suffered something traumatic and it disturbs her sleep. She does not regain Willpower at night. Nightmares usually last for 10 - Integrity days. If not therapy may be required.
+
+Lucid Dreamers cannot just imagine their nightmares away, this condition represents subconscious trauma that is not so easily fixed. However they may fight their nightmares in a combat scene to claim their night's rest. \\
+
+\textbf{Resolution:} Your character has time to process the trauma. (Do not take a beat).\\
+\textbf{Days remaining:} \_\_\_\_}
+
+\Cond
+{Nightmares Come Alive}
+{
+The character has been assimilated into the fake reality of an Echo. She no longer has access to her own memories, believing instead that she is whomever the Echo has cast her as. She believes the environment around her is real, disbelieving anyone claiming otherwise. She can’t use any supernatural abilities, and neither can she spend Willpower points.
+
+Should the character leave the Nightscape, or should the Tainted Place be cleansed, purged or purified, this Condition disappears without resolving. 
+
+\textbf{Resolution:} Suffer harm or greatly imperil yourself by acting in line with your new fake persona, rather than your true self.
+\textbf{Trapped} \underline{Y/N}
+}
+
+%\TCond
+%{Obsessive Vengeance}
+%{After witnessing horrors and cruelties your character is consumed with the thought, she cannot rest until she has set things right. If the perpetrator is present she mediately goes for him, otherwise she obsessively searches for the perpetrator. If your character wishes to do anything else she must succeed on a Resolve + Composure - Shadows roll.\\
+%\textbf{Resolution:} The duration of the haunting ends. 
+%}
+
+\OCond{Ofuda (Persistent)}
+{The target of this Condition is an Ofuda, a protective talisman that drives monsters away. Unless an affected monster succeeds on a Resolve + Supernatural Tolerance - Strength roll they must immediately leave the affected area.
+
+When an Ofuda is created all affected beings in the target area must immediately roll to overcome the Ofuda or depart.\\
+\textbf{Causing the Condition:} Only the Charm Ofuda can cause this condition\\
+\textbf{Ending the Condition:} The charm expires. \\
+\textbf{Ending the Condition:} The Ofuda is destroyed or moved more than ten feet. \\
+\textbf{Affects:} \fillunderline \\
+\textbf{Strength:} \_\_\_\_\_\_\_ \\
+\textbf{Duration:} \fillunderline \\
+\textbf{Area affected:} \fillunderline\\
+\textbf{Exemptions:} \fillunderline}
+
+\Cond
+{Over-compensatory Guilt}
+{Your character has done something she feels guilty about, as a result she is attempting to counter her feelings by making amends in every way except addressing the real issue: If she stole something she might compulsively give charity, if she told a dangerous lie she might become compulsively honest. \\
+\textbf{Resolution:} The character suffers a hardship or gives up on something she wants through misplaced penance.\\
+\textbf{Resolution (as Persistent):} The character confesses her original crimes and makes amends.
+}
+
+%\TCond
+%{Pain Seeker}
+%{Your character has personally committed an act of cruelty and dearly wishes to suffer for it. She obsessively seeks out the person she has wronged and tries to provoke them into a fight. Against whomever your character has %wronged she reduces Defence by Shadows, including magical Defence and magical armour. Reduce magical armour first.\\
+%\textbf{Resolution:} The duration of the haunting ends. }
+
+\Cond{Phobia (Persistent)}
+{Your character is scared of something, really scared. When she encounters her phobia she must roll Resolve + Composure, on a failure she flees in terror. \\
+\textbf{Beat:} Your character is forced to flee.\\
+\textbf{Resolution:} Your character overcomes her fear.}
+
+
+
+\Cond{Primal Scream}
+{
+The Princess' magic has gone wild and is flowing out of her in a magical storm. Every turn she spends as many Wisps as possible and everyone within Inner Light yards of the Princess, including the Princess, takes one die of Bashing damage per Wisp spent. The Princess may do nothing unless she succeeds on a Resolve + Stamina roll, in which case she may move at a walking pace for a turn.\\
+
+\textbf{Resolution:} The Princess' incapability causes her a serious inconvenience.\\
+\textbf{Resolution:} The Princess significantly hurts a friend or ally.\\
+\textbf{Ending the Condition:} The Princess falls unconscious.\\
+\textbf{Ending the Condition:} The Princess runs out of Wisps.}
+
+\Cond
+{Property Tax}
+{Alhambran magic is stealing hope from the land.\\
+Every week the land produces (Size * weeks active) Wisps, which can be gathered by anyone who knows Capitation. At the end of each week roll the wisps produced. Two successes removes one point of Beauty from a Blessed Place or inflicts one point of Taint Severity, what is left behind after Alhambra steals all which is good. \\
+\textbf{Ending the Condition:} After 24 hours without being refreshed the Condition ends. Leftover Wisps are lost.\\
+\textbf{Ending the Condition:} The Condition ends 24 hours after the Taint reaches 5 points. Leftover Wisps are lost.\\
+\textbf{Ending the Condition:} If Purgation is used on the underlying Taint, remove this condition.\\
+\textbf{Size:} \_\_\_\_\_\_\\
+\textbf{Weeks the charm has been running:} \_\_\_\_\_\_\\
+\textbf{Wisps availabile:} \_\_\_\_\_\_\_\_\_\_\_\_}
+
+\TiltBCond{Protective Blessing (Persistent, Variable)}
+{Your character is enchanted by magic which protects her from others, reducing the dice pool of anyone who tries to affect her in certain ways. This might apply to a named trait, a category of traits, or a speciality like field that works across skills.\\
+\textbf{Ending the condition:} Blessings are temporary, and vanish after a while.\\
+\textbf{Ending the condition:} Some blessings end when a certain condition is met.\\
+\textbf{Affected trait:}\fillunderline \\
+\textbf{Decrease:}\_\_\_\_\_\\
+\textbf{Duration:}\fillunderline \\
+\textbf{End trigger:}\fillunderline}
+
+\BCond{Pure Perfection (Persistent)}
+{Your character has become the avatar of Mirrors, the True Heir destined to save the world. She is pure perfection. 
+
+You get two dots in Striking Looks, with the appearance of \textquotedblleft the best person ever!\textquotedblright\, (it provides a bonus to most things) and the Royal Tongue Merit. 
+
+Perfection is nothing without people to recognise it. Any Princess with this Condition has her True Followers, for her True Followers the Princess' Striking Looks is considered to be five dots and grant a +5 bonus. The Princess may also spend her follower's Willpower instead of her own, or instead of her own Wisps at a 1:1 ratio. She may not however refill her pools from her followers.
+
+Note that taking Willpower from anyone without permission is a Belief Comprimise with a -3 penalty.\\
+\textbf{Ending the condition:} The scene ends. }
+
+\Cond{Running on Fumes (Persistent)}
+{A Princess' magic is her hopes, beliefs and emotions given form. Your character has used up all her magic, she hasn't lost her emotions but she is out of fuel and running on fumes. It's an uncomfortable situation, but thankfully a temporary one. 
+
+When adding Willpower to a dice pool you only get +2 instead of +3, in addition you take a -2 penalty on rolls that depend upon your emotions. Typically this covers making emotional connections with people, expressing yourself and enjoying works of art. Wisp regeneration rolls and Charms are unaffected (the lack of Wisps already covers the effects on magical ability). \\
+\textbf{Beat:} The character fails a roll because of this Condition (roll the missing dice separately to determine if it was because of this condition).\\
+\textbf{Resolution:} The character refills her Wisp pool. The condition ends when she has more than (10 - Belief) Wisps.}
+
+\OCond{Sacred Grove}
+{The area has been sculpted into a beautiful garden that calms all within. \\
+
+\textbf{Area affected:} \fillunderline \\
+\textbf{Duration:} \fillunderline \\
+\textbf{Blessings:} \fillunderline }
+
+\Cond
+{Scars of the Past (Persistent)}
+{Your character has a scars from a past trauma, and when exposed to stimuli that causes that trauma to resurface she must make a Sensitivity roll. As a rule of thumb this Condition should only be used when your character rolls Sensitivity for something vastly different from the normal causes. A sheltered character who rolls Sensitivity at a simple fist fight would not qualify, but one who rolls Sensitivity at the smell of her dead mother's favourite perfume would.   
+\textbf{Beat:} Score at least one Success on a Sensitivity roll cased by this Condition.
+\textbf{Resolution:} Time and therapy can resolve the condition, but some scars never heal right. 
+}
+
+\Cond
+{Self-Doubt}
+{Your character has done something that shakes her confidence in herself and now she looks to other's for guidance.
+
+When someone attempts social manoeuvring in order to recruit the Princess' support for their plan or to otherwise follow her lead the Princess starts with two fewer Doors than she would normally have.\\
+\textbf{Resolution:} Someone takes advantage of your character.\\
+\textbf{Resolution (as Persistent):} The character reaffirms her sense of self worth by overcoming a similar problem to the one that shook her self worth.\\
+\textbf{Resolution (as Persistent):} The character reaffirms her sense of self worth by sucessfully applying her ideals to a difficult or dangerous task.
+}
+
+\Cond
+{Sensory Overload (Persistent)}
+{Your character does not cope well in over stimulating environments. When you take this Condition choose one or more environments such as: Loud places, crowds, loud crowded places, strong plastic smells, or something else along those lines. Upon entering the designated environment your character takes a -1 penalty to all Social rolls which increases by one every half an hour. After an hour you also take a -1 penalty to Mental and Physical rolls which also increases by one every half an hour. Neither can grow beyond -5. \\
+\textbf{Beat:} Your character gives up an opportunity or suffers a significant set back to avoid an uncomfortable environment. 
+\textbf{Resolution:} Most characters with this Condition are born with it and cannot remove it without powerful magic.
+}
+
+\Cond
+{Stereotypical (Persistent)}
+{Your character has been magically transformed into a walking stereotype.
+
+Your vice is replaced with acting in character for your stereotype where as taking any action that goes against the stereotype requires a point of Willpower. Finally you also take the Open conditions to any Spirits or Dreamlanders who personify the stereotype.\\
+\textbf{Duration:} \fillunderline \\
+\textbf{Stereotype:} \fillunderline\\
+\textbf{Beat:} Your enforced behaviour causes you a significant setback.\\
+\textbf{Ending the Condition:} The magic affecting your behaviour will wear off after time.
+}
+
+
+%\TCond
+%{Senseless Martyr}
+%{Your character is willing to offer herself as a victim in the forlorn hope that others might be left alone. She deducts her Shadows when rolling to contest any supernatural power or decreases a relevant attribute by Shadows %when resisting a supernatural power. \\
+%\textbf{Resolution:} The duration of the haunting ends. }
+
+
+\Cond{Shadow Takeover}
+{The Princess' Jungian shadow has overflowed with magically charged negative emotions and become sentient. No longer a healthy container for negative aspects of the self, it has sized control of the Princess' body and seeks to redress issues that the princess has repressed or suppressed.\\
+
+\textbf{Beat:} The Jungian shadow causes the Princess a significant problem.\\
+
+\textbf{Ending the Condition:} The magic bestowing sentience to the Shadow wears off after a few hours.}
+
+
+
+\Cond
+{Shattered Confidence (Persistent)}
+{Your character has completely lost her confidence in herself. Emotions are magic, and her lack of faith in her herself and her magic has become a self fulfilling prophecy. Your character cannot Transform, use Charms or Practical Magic. Even A Princess of Mirrors will be limited to her mundane identity. \\
+\textbf{Beat:} Your character is harmed or fails a significant goal because she could not access her magic.\\
+\textbf{Resolution:} The character gains a dot of Belief.}
+
+\Cond
+{Tainted}
+{Your character has been partly corrupted by a Tainted place. One of the place’s Aspirations is rooted into his mind, felt as a nagging desire or a twisted fantasy he doesn’t fully understand. He may fulfil that Aspiration at any time. If doing so causes a breaking point (which it very likely will) the results of the roll play out as if the character were still in the Tainted place, except that it cannot reapply this Condition.
+
+The seed of corruption within your character’s soul inflicts nightmares. He cannot regain Willpower from sleep. Also, the touch of jade is mildly irritating to the character. This has no mechanical effect, and the character may not even notice it consciously, but an attentive observer might take note of his aversion to handling the gemstone.
+
+\textbf{Tainted Aspiration:} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.\\
+\textbf{Resolution:} Fulfil the Tainted Aspiration.\\
+\textbf{Resolution:} Fulfil your character’s Virtue.
+}
+
+\TiltCond{Sick}
+{Your character is ill. This condition can be moderate or sever.
+
+In the moderate version you take a -1 penalty to all actions, which increases by -1 for every few minuets of strenuous work or turn of combat, the penalties reset after a good rest. A sever sickness inflicts the same penalty but you also take 1 bashing damage for every few minuets of strenuous work or turn of combat.\\
+\textbf{Beat:} You suffer a significant setback or hardship because of your illness. \\
+\textbf{Resolution:} Magic, medicine or bed-rest will cure most illness.}
+
+\Cond{Slow Transformation (Persistent)}
+{For whatever reason the Princess takes time to Transform, roughly about five minutes. Her Phylactery might be a small bag that somehow containing her entire regalia, which she must change into as with any other clothes. She may simply hover, twirl and sparkle for five minutes before the transformation is complete. Spending a Wisp to Transform reduces this to one minute.\\
+\textbf{Beat:} Your character's suffers significant hardship because she could not transform quickly.\\
+\textbf{Resolution:} At the player's desecration acquiring a dot in Inner Light may grant her the power to transform quickly. }
+
+%\Cond
+%{Sore Spot}
+%{
+
+%Your character hasn't been hit with an emotional shock, but one is lurking under the surface of her mind. Somebody who knows what happened can push her over the edge. When they try make a contested social roll with a the attackers' threshold being the Princesses' Belief + Composure and the Princess' being the attacker's dice pool. Roll once per turn, and if the attacker reaches the threshold first, make a Sensitivity roll, if the Princess wins then the verbal jousting turned out to be a positive outlet.\\
+%\textbf{Resolution:} Win or loose, Resolve the Condition after a contested social roll. \\
+%\textbf{Resolution:} The Princess deals with her underlying issue. 
+%}
+
+\Cond
+{Soul Shocked}
+{Your character has been killed while on a sojourn outside her physical body, resulting in a shocked sense of self. Upon gaining this Condition, roll her current Willpower points (not dots) as a dice pool. Ignore 10-Again on this roll, and do not roll a chance die if she has no Willpower left. She keeps one Willpower point per success, and immediately loses the remainder. While this Condition is in effect, your character does not regain Willpower from Virtue, Vice, or equivalent traits. She still regains Willpower from rest, surrender, and any other means of regaining Willpower.\\
+\textbf{Resolution:} Regain full willpower.
+}
+
+
+
+\Cond{Special Snowflake}
+{Your character must always be the most unique and special person in the room. If all the boys play rugby and the girls play rounders, she must be the one girl who insists on playing rugby. If both sports are open to both genders she has to be a captain or practice distance running by herself.
+
+The exception is the Princess' explicit rivals. There are usually two captains in a sports match but the Princess doesn't have to be something silly like empress of the blue team. She can just (try to) prove herself as the one and only victorious captain.\\
+\textbf{Resolution:} Your character causes a scene by refusing to be part of the group.\\
+\textbf{Resolution:} Your character gives up on something she wants because other people are doing that too.\\
+\textbf{Resolution (as Persistent):} Your character confronts her inner insecurities and learns that the respect of the world is worth less than self respect. }
+
+\OCond{Spit and Gum}
+{Amazingly this thing works but it is held together by nothing more than spit and gum. Use it quickly before it collapses. 
+
+\textbf{Duration} \_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Ending the Condition:} The duration expires, returning the device to whatever sorry state it was in before it bashed into service.\\
+\textbf{Ending the Condition:} The device takes damage, ruining whatever fragile repairs were in place.}
+
+\Cond{Still Phylactery}
+{Unlike most Princesses you have never been able to summon your phylactery to your hand and must transport it through mundane means. You can recreate a destroyed Phylactery but unless you are inside your palace it takes a full hour.
+
+\textbf{Beat:} You face a significant disadvantage because you cannot summon your phylactery. \\
+\textbf{Ending the Condition:} You may choose to discard this Condition any time you gain Inner Light.}
+
+\Cond{Stuck Magic}
+{After trying and failing to perform a large act of magic your character's magic has gotten stuck. It is partly a blow to her confidence and partly an almost physical blockage in the flow of her magic. A good push should clear it. 
+
+\textbf{Resolution:} At any time when rolling to Transform or invoke a Charm the Storyteller may apply a -2 penalty.}
+
+\Cond{Suggestible (Persistent)}
+{Your character has entered a fugue state where she will follow any instructions given for she lacks the willpower or initiative to do otherwise. For the same reason she will follow her instructions in a literal and uncreative fashion.
+
+Blatantly suicidal or heinous orders are ignored, when multiple people are ordering someone around the most recent order takes precedent.\\
+\textbf{Beat:} Your character does something against her interests because she was asked to. \\
+\textbf{Resolution:} Your character exits her fuge state, how she does this depends on how she got there in the first place. \\
+\textbf{Awakes when:} \fillunderline }
+
+
+\Cond 
+{Supernatural Heraldry (Persistent)}
+{Your character’s Heraldry is obviously supernatural. If your group has decided that the mortals of the World of Darkness treat Heraldry as normal clothing then for one reason or another your character is an exception. If your group has decided that the public reacts realistically to a Princess' appearance than your character’s heraldry causes her more problems than the average Princess; wearing a sailor fuku in public might be unusual but the crown made of flowers floating above her head is clearly supernatural. \\
+
+\textbf{Beat:} Your character suffers a significant hardship because of reactions to her Heraldry.\\
+\textbf{Beat:} Your character's faces a significant hardship because she avoided a situation where her Heraldry would be inappropriate.\\
+\textbf{Resolution:} At the player's desecration a major life event may reshape your character’s Heraldry. }
+
+%\Cond{Suitor (Persistent)}
+%{Your character has been magically endowed with a goal, to prove yourself worthy of a Princess' affections. He is not compelled to act, but recieves magical positive reinforcement when he wins Her Highness' affection.\\
+
+%\textbf{Beat:} Your character faces a significant hardship from attempting to prove himself a worthy suiter. \\
+%\textbf{Beat:} Emotional distress from being under a magical spell causes your character a significant hardship. (Alternatively it causes another Condition or triggers a Breaking Point which in turn grants Beats.) \\
+%\textbf{Willpower:} Your character receives a token of affection from the Princess, the applicable token is defined when this Condition is created. (Only one point of Willpower per princess per day may be gained in this manner) \\
+%\textbf{Ending the Condition:} Magic will fade in time. \\
+%\textbf{Token of affection:} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+%\textbf{Duration:} \_\_\_\_\_ }
+
+\TCond{Sweet Sin}
+{Your character's darker desires have been enchanced by magic. \\
+
+\textbf{Cash In:} When you indulge your Vice cash in this Condition to gain an extra point of Willpower. This may not take you above your maximum Willpower. }
+
+\OCond{Tempestuous}
+{The place or person resonates with Tempesta. Nearby Goalenu do not suffer from Wisp Bleed and a Goalenu may spontaneously appear, if the Queen of Storms desires it. \\
+
+\textbf{Causing the Condition:} Add up the Tempesta dots of everyone nearby, as well as the Inner Light dots of any nearby Princesses of Storms. If there is 20 or more dots apply the Tempestuous condition. \\
+\textbf{Causing the Condition:} In the presence of great hatred or destruction apply the Tempestuous Condition.\\
+\textbf{Causing the Condition:} A Strengthen Influence of Tempesta may apply this condition to anyone with a dot of Tempesta. \\
+\textbf{Ending the Condition:} If the violence ends or the followers of Storms disperse remove the Condition.}
+
+\BCond{Traded Luck}
+{Good luck for bad. Your character has traded some luck, but will have to uphold her end of the deal. \\
+\textbf{Ending the Condition:} On any diceroll, if you get a number of Successes equal to the Traded Successes you instead have just rolled the Stored Successes. Do this before any using power that can grant the Traded Luck Condition.\\
+\textbf{Traded Successes:} \_\_\_\_\\
+\textbf{Stored Successes:} \_\_\_\_}
+
+\Cond{Truly Mundane}
+{
+The Princess' connection to the Light is hampered while untransformed; in her mundane form she is almost an ordinary human. A Princess with this Condition cannot use a Bequest, add her Inner Light as Supernatural Tolerance, or spend Wisps for any reason other than to transform reflexively. However she may regain Wisps and suffer Sensitivity like normal, and she still has her Echo and Dreams. While mundane she cannot benefit from any supernatural Merit related to the light that represents a skill or ability, such as speaking the Royal Tongue. \\
+\textbf{Beat:} The Princess is significantly impeded by this Condition, or falls prey to a hostile supernatural effect while in her mundane form.\\
+\textbf{Ending the Condition:} Gaining a dot of Inner Light can optionally resolve this Condition.
+}
+
+\Cond{Trusting}
+{The character feels a bond of fellowship with everybody; he accepts friendly overtures without suspicion. Anyone beginning a social manoeuvre on the character can accept a Condition to open two Doors without rolling, as if they had the Sympathetic Merit (see GMC page 171); a character who actually has that Merit also raises their impression by one step when using it.\\
+\textbf{Resolution:} Someone takes a Condition to open some of your Doors. 
+}
+
+\Cond{True Follower (Persistent)} 
+{You have seen the majesty of the True Heir, and know that next to her nothing you accomplish will amount to anything. 
+
+You perceive the True Heir as a paragon, the epitome of beauty and charm. In effect, in your eyes she has five dots in Striking Looks as \textquotedblleft the best person ever!\textquotedblright\, (it gives a bonus to most things). 
+
+In addition realising the futility of attempting anything when someone else is sure to do anything worthwhile faster and better than you saps your Willpower: The True Heir may take your Willpower for her own uses. \\
+
+\textbf{Beat:} Some Willpower is stolen.\\
+\textbf{Beat:} The Princess manipulates you into a serious hardship with her Striking Looks.\\
+\textbf{Your True Heir:} \fillunderline \\
+\textbf{Willpower available for the taking:} \_\_\_\_\\
+\textbf{Ending the Condition:} The scene ends.}
+
+
+
+\Cond{Two Hearts, One Soul (Persistent)}
+{There is nothing the Light cherishes more than a true bond between people, but sometimes the Light itself Blossoms through such a bond. In rare cases two Princesses are connected at the most fundamental level. They Blossom side by side and they share a bond closer than sisters, closer than lovers. A Princess with this Condition needs another Princess to Transform. She and her partner must invoke their Transformations together while standing within a few feet of each other. She has no problem using other abilities, such as Practical Magic and Charms, without her partner; only Transformations need the partner's presence. \\
+\textbf{Beat:} Your character's suffers significant hardship because her partner was not present when she needed to Transform.\\
+\textbf{Resolution:} The Princess' partner dies.}
+
+\Cond{Ugly (Persistent)}
+{There's no polite way to put it, your character looks hideous. You gain a -2 to all Persuasion and Socialise rolls with strangers who can see your face. This penalty does not apply to close acquaintances unless you are specifically trying to seduce them, unless of course their tastes run that way. 
+
+It is in fact possible to have both the Ugly Condition and the Striking Looks Merit, this usually implies a fearsome visage which is good for intimidation but bad for making friends. \\
+\textbf{Beat:} The character fails a roll because of this Condition (roll the missing dice separately to determine if it was because of this condition).\\
+\textbf{Resolution:} Your character gets plastic surgery or permanently improves her appearance with magic.}
+
+\Cond{Union of Life and Death (Persistent)}
+{Using the magic of Amethyst your character has is host to a Ghost. Normally she remains in control but that can change. In addition the following benefits apply so long as the two of you are working together: \\
+She may access one the Ghost's Numina, rolling Wits + Resolve to use it.\\
+She may spend one Willpower to replace her Mundane Dots in a Skill with the Ghost's, however all rolls made using that Skill are at a -1 penalty.  
+
+If your character and the Ghost disagree on what to do next roll Power vs Resolve + Supernatural Advantage. If the Ghost wins apply the Possessed Condition for the scene, otherwise the Ghost cannot try again for the scene. \\
+
+\textbf{Beat:} The Ghost successfully possesses you.\\ 
+\textbf{Resolution:} The condition vanishes at the end of the day\\
+\textbf{Resolution:} You and the Ghost mutually agree to part ways.}
+
+\Cond{Unstable Transformation (persistent)}
+{
+Your character doesn’t have full control over her transformations. Meeting with a specific trigger while Transformed makes her lose control, and she reverts to mundane form. The trigger must be an event not under the her control, though it shouldn’t be frequent. (A few examples: being splashed with hot water, hearing a specific nonsense phrase.) After losing control the Princess can’t transform again during the current scene.
+
+If a Princess of Mirrors has this condition it works in reverse.\\
+
+\textbf{Beat:} The Princess gets into difficulties due to involuntarily returning to her mundane form.\\
+\textbf{Ending the Condition:} Gaining a dot of Inner Light can optionally resolve this Condition.\\
+\textbf{Ending the Condition:} Join or leave the Court of Mirrors.
+}
+
+
+%\BCond{Uplifted}
+%{After staying in a Blessed Place your character's soul has been illuminated by it's Beauty and the people who worked so hard to make a better place. You feel confident, empowered, and inspired to do your part for the good of humanity. \\
+%\textbf{Cash In:} When you buy a dot of Integrity (or equivalent) you may trade in five points of Lux to reduce the exp cost by one or ten points of Lux to reduce the exp cost by two.\\
+%\textbf{Lux:}\_\_\_}
+
+%\Cond{Vice Seeker (Persistent)}
+%{Your character has a compulsion, probably magical in nature, to indulge in her vices. Whenever an opportunity arises she must roll Resolve + Composure, on a failure she dives right in.\\
+%\textbf{Beat:} The character suffers a significant hardship because she was compelled to persue her Vice.\\
+%\textbf{Resolution:} Curses are temporary, and vanish after a while.\\
+%\textbf{Resolution:} Some curses have an escape condition which end the curse as soon as it is fufilled.\\
+%\textbf{Duration:} \_\_\_\_\_\_\\
+%\textbf{Escape Clause:}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+
+\OCond{Warded}
+{The area is protected against incoming magic, this doesn't protect anyone when the foe is already inside the protected area. 
+
+Any attempt to project magic into the defended area triggers a Clash of Wills against the Princess' Class of Wills dice pool at the point this Condition was created. The Princess who created the wards is also immediately aware of any attempt to breach her defences.\\ 
+
+An area cannot be defended by multiple wards at the same time, only the strongest ward applies. \\ 
+\textbf{Defence dice pool:} \_\_\_\_ \\
+\textbf{Who's aware of attacks:} \fillunderline \\ \_\fillunderline}
+
+
+
+%\TCond
+%{Wilful Amnesia}
+%{Your character performed an act of cruelty so terrible she refuses admit or even remember she ever did such a thing. All memory of it is lost until this Condition is resolved and any attempt to force your character to acknowledge the truth takes a penalty equal to her Shadows.\\
+%\textbf{Resolution:} The duration of the haunting ends. 
+%}
+
+\Cond{Yandere} 
+{Your character's attraction to another reaches outright insanity. Whenever they're doing an action in the name of their crush, in their perspective, they gain a +3 bonus. However, any actions taken that goes against their obsession takes an equal penalty. They will not stop, even if asked by the person of their obsessions until they either receive psychiatric help,  or the magic causing it ends.\\
+\textbf{Resolution:} You suffer a significant hardship as the result of your insanity.\\
+\textbf{Resolution:} You inflict a significant hardship as the result of your insanity.\\
+\textbf{Resolution:} You receive psychiatric help.\\
+\textbf{Resolution:} The magic affecting your mind wears off.}
+
+\OCond{Zone of Truth}
+{The area has been magically saturated with the power of truth. Anyone with a Composure less than the Activation Successes is unable to knowingly lie, make statements without regard for the truth, or make statements that are true but intended to deceive. If they try the find themselves blurting out the truth or something like \textquotedblleft I don't know\textquotedblright\, They may hold their tongue, unless the Condition is forceful, in which case they must roll Composure + Subterfuge to remain silent when asked a question. 
+
+It takes a sensitivity to magic for someone to notice the presence of a Zone of Truth, but the effects are obvious to most people after a while. 
+
+The effects fade at the end of a scene.\\
+
+\textbf{Radius:} \_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Activation Successes:} \_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Forceful:} \underline{Y/N}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%TILTS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\Tilt{Aegis}
+{Your character has been blessed with magical protection much like a Princess' Holy shield. You have a number of Aegis Points that may be spent just as a Noble would spend Wisps on her Holy Shield. \\
+
+The Aegis Tilt can \textbf{not} be replaced with a more powerful Aegis, and for the purposes of this rule the Tilt is considered to last one scene even if all the Aegis Points are used sooner.\\
+
+\textbf{Aegis Points:} \_\_\_\_\\
+\textbf{Aegis Points per turn:} \_\_\_\_}
+
+\Tilt{Anti-War Zone (Environmental)}
+{The area has been magically blessed with peace and tranquillity, which takes the edge of the enormous fight happening within. Bullets turn into a puff of petals mid air, swords grow dull and anger fades. All combat rolls within the affected area take a penalty. This is measured by intent, so healing rolls to help someone back into the fight are penalised. Healing rolls for the sake of healing are not. 
+
+If the penalty reduces a combatant to a chance die, a Dramatic Failure might destroy their weapon. A gun or sword turns into beautiful flowers. \\
+\textbf{Ending the Tilt:} This tilt lasts for one scene. \\
+\textbf{Penalty:} \_\_\_\_}
+
+\Tilt{Battle Theme}
+{Your character is inspired by a Princess' magic and feels ready to face battle. You gain +2 to Resolve rolls to resist fear, panic, and similar. In addition you cannot suffer from an Integrity Breaking Point while benefiting from this Tilt, however when the Tilt ends you will have to roll any Breaking Points you ignored as the effects catch up to you. \\
+
+\textbf{Ending the Tilt:} The Princess stops performing her battle music. \\
+\textbf{Ending the Tilt:} You move out of earshot. }
+
+\Tilt{Battlements (Environmental)}
+{The area is protected by a dormant shield, when it is attacked the shield will spring into existence in time to block incoming fire. The size of the shield covers the whole area, it's shape conforms to the boundary. 
+
+Battlements cannot be instantly replaced or repaired by casting Bubble Shield but if the shield has the Rebuilding Upgrade anyone with permission can spend either a Wisp or a point of Willpower to take the shield down before it is destroyed. If they do so reapply the battlements condition at the end of the scene. \\
+
+\textbf{Ending the tilt:} The Scene ends.\\
+\textbf{Ending the tilt:} The shield's Structure is destroyed.\\
+\textbf{Structure:} \_\_\_\_\\
+\textbf{Durability:} \_\_\_\_\\
+\textbf{Upgrades:} \fillunderline}
+
+\Tilt{Berserk}
+{
+Your character is in such a rage that they cannot control themself. They must move towards or attack the focus of this Tilt every turn. They also get +2 to all attack roll, but -1 to all other rolls. \\
+
+\textbf{Ending the tilt:} The duration ends.\\
+\textbf{Ending the tilt:} Take twice Stamina Bashing Damage or Stamina Lethal Damage.\\
+\textbf{Duration:} \_\_\_\_
+}
+
+%\Tilt{Dazzled}
+%{The character has been momentarily blinded by a bright light.\\
+%\textbf{Effect:} The character suffers a -3 penalty to all actions which depend upon sight \textendash\, including attack rolls \textendash\, and halves her defence due to partial blindness.\\
+%\textbf{Causing the Tilt:} The most common origins of this Tilt are supernatural powers or special equipment such as flash grenades.\\
+%\textbf{Ending the Tilt:} This tilt only lasts for a short amount of time, usually one turn per success on a roll or the equipment bonus of a weapon designed to dazzle the opponent.}
+
+\Tilt{Hailstones (Environmental)}{
+Chunks of ice are raining down and they're large enough to do serious damage. \\
+\textbf{Effect:} Everybody standing under clear sky takes 5 dice of bashing damage a turn.\\
+\textbf{Causing the Tilt:} Short of supernatural abilities, only mother nature can create a hailstorm.\\
+\textbf{Ending the Tilt:} Most weather clears up in a while, until then get indoors or at least under some solid cover.}
+
+\Tilt{Lucky Escape}
+{
+If your character’s last health box is filled with Lethal or Aggravated damage erase the damage in either the last box or last two boxes then them with Bashing Damage. Do this at the start of the character's next turn, then remove the Tilt. \\ 
+
+\textbf{Health boxes affected:} \underline{1/2}
+}
+
+\Tilt{Living Oak}
+{The Character has been transformed into a living statue of perfectly carved wood. The magic of her transformation preserves her ability to move and think but not perfectly: Halve her speed. Her weight is also multiplied by five, so don't walk on anything fragile. 
+
+Being made of solid wood grants the Princess incredible resilience, she gains one point of general armour for every success which stacks with any other kind of armour. This is in addition to outright immunity against some types of damage such as poisons or radiation. Having no organs or blood to loose, physical damage is a significantly reduced threat. Any physical attack which does less than five points of Lethal damage is downgraded to Bashing damage. Fire damage is not downgraded. 
+
+\textbf{Ending the Tilt:} The scene ends.\\
+\textbf{Ending the Tilt:} Magic is used to revert the Transformation.}
+
+\Tilt{Low Light (Environmental)}
+{It's dark. Barring supernatural abilities or specialized equipment all visual perception rolls and ranged attacks take a penalty equal to the severity. 
+
+\textbf{Severity:} \_\_\_\_}
+
+
+\Tilt{Low Light (Environmental)}
+{There is little light, all perception penalties that depend upon sight take a penalty. \\
+
+\textbf{Causing the Tilt:} Magic can dim the lights, bust this Tilt is usually natural\\
+\textbf{Penalty:}\_\_\_\_\_\_\_\_\_
+}
+
+\Tilt{Midnight Noon (Environmental)}
+{Any supernatural trait or ability that makes a reference to daytime, nighttime, sunlight, moonlight or starlight, etc (but not a more specific time like noon or the witching hour) acts as though it was under whatever conditions the Princess would prefer, even if she is unaware of it.\\ 
+
+\textbf{Causing the Tilt:} Only Ambassadors to Night or Regents of Heliotrope can create this tilt.\\
+\textbf{Vampires only?:} \underline{Y/N}}
+
+\Tilt{Mist (Environmental)}{A strong mist blankets the battlefield.\\
+\textbf{Effect:} Mist isn't that harmful, but it does impose a -3 to -5 penalty to visual perception. Be careful while driving.\\
+\textbf{Causing the Tilt:} Supernatural powers or a lot of dry ice machines could do it, but most Mist is merely natural weather.\\
+\textbf{Ending the Tilt:} Most weather clears up in a while.}
+
+\Tilt{Pain Immunity}
+{Your character does not feel any pain. 
+\textbf{Effect:} Ignore any wound penalties, in addition you will not fall unconscious if your health track is filled with Bashing Damage. However without pain you may not even notice you're hurt, any attack that does less than three points of damage requires a Wits + Composure roll to notice. Effects that depend entirely on pain fail to affect you. Finally anyone trying to torture you for information takes a penalty equal to your composure. It's unnerving watching your character ignore pain.}
+
+
+\Tilt{Queen's Grief}
+{The character has assumed the mantle of Alhambra's Lady, she bears the suffering of all her people.\\
+\textbf{Effect:} At the end of every turn where she protected an Alhambran with Sheltering Hand roll Resolve + Composure - the penalty: \\
+\textbf{Dramatic Failure:} The princess collapses into a hysterical mess for the scene, end both Queen's Greif and Sheltering hand. She suffers Depression for the listed days.\\
+\textbf{Failure:} Increase the penalty and days of depression by one.\\
+\textbf{Success:} Increase the penalty by one\\
+\textbf{Exceptional Success:} Do nothing\\
+\textbf{Ending the Tilt:} The scene ends. The Princess suffers Depression for the listed days.\\
+\textbf{Ending the Tilt:} The Princess chooses to end Sheltering Hand. She suffers Depression for the listed days.\\
+\textbf{Penalty:}\_\_\_\_\_\_\_\_\_\\
+\textbf{Days of Depression:}\_\_\_\_\_\_\_\_\_}
+
+%Any damage she causes is Aggravated (even if she doesn't want it to be). The Princess also gains the resiliance of mind and body shown by the Seraphic General in her last stand:  She gains temporary Health boxes equal to her Resolve + Inner Light and every time the Princess kills someone she considers to be a follower of the Dark, she regains all her Willpower. Followers of the dark include: Darkened, Darkspawn and all related creatures, Princesses and Sworn of Tears, Alhambran citizens, and anyone the Princess has a good reason to believe to be any of the above.
+
+\Tilt{Seraphic Fury}
+{The character has assumed the mantle of Storms. \\
+\textbf{Effect:} Any damage caused by the Princess in any way is Aggravated. In addition she gains Resolve + Inner Light temporary Health Boxes. Finally every time she kills a Creature of the Darkness or a follower of Tears she completely refreshes her willpower and gains a single box of temporary Health. If the Princess wrongly suspects someone of being in league with her ancient enemies, they still provide the bonus.
+
+Princesses affected by Seraphic Fury must fight on until the end. They simply cannot imagine giving up.\\
+
+\textbf{Causing the Tilt:} Only the Charm The Finest Hour can cause this Tilt.\\
+\textbf{Ending the Tilt:} The scene ends. Damage is redistributed according the rules for tempoary health in WoD Core.\\
+\textbf{Ending the Tilt:} There are no enemies left to fight. Damage is redistributed according the rules for tempoary health in WoD Core.
+}
+
+\Tilt{Peace on Earth}
+{Your character cannot perform any action that intentionally causes damage to another, what's more your character cannot give tactical aid to participants in a battle. This covers but is not limited to shouting advice, manipulating the environment, or providing equipment. Intent matters, creating magic shields to stop the fight is ok but creating those same shields to give one side an advantage is impossible. 
+\textbf{Ending the Tilt:} The scene ends.\\
+\textbf{Ending the Tilt:} Someone attacks your character or her allies.\\
+\textbf{Ending the Tilt:} The character who created this tilt attacks someone.}
+
+\Tilt{Sheltering Hand}
+{The character has assumed the mantle of Alhambra's Lady, and the duty to protect Alhambra's people.\\
+\textbf{Effect:} Whenever a mortal or Sworn Alhambran takes damage within the Princess' presence she automatically prevents the damage by spending Wisps with the same costs as her Holy Shield, ignoring her per turn limit. At the end of each turn where the Princess sheltered her subjects the Queen's Grief Condition is triggered. If the Princess lacks the necessary Wisps she reflexively drains them from her surroundings. The Storyteller should roll the number of Wisps drained in this manner, each Success inflicts one point of Taint upon the Princess' location. 
+
+The Princess qualifies for regaining Wisps by Inner Strength and can apply no Invocations except Lacrima.\\
+%\textbf{Causing the Tilt:} Only the Charm Sheltered by Her Hand can cause this Tilt.\\
+\textbf{Ending the Tilt:} The scene ends.\\
+\textbf{Ending the Tilt:} The Princess chooses to end the Tilt.}
+
+
+\Tilt{Shining Heart}
+{The character has assumed the mantle of Swords, her passion burns through all obstacles.\\
+\textbf{Effect:} Within a small area surrounding the Prinecess all supernatural powers not of the Light take a penalty equal to the activation successes, in addition the affected area is bathed in true sunlight. 
+
+The Twilight Invocations, as unethical as they may be, are drawn from the Light. 
+
+The Princess qualifies for regaining Wisps by Inner Strength and can apply no Invocations except Fuoco.\\
+%\textbf{Causing the Tilt:} Only the Charm Sheltered by Her Hand can cause this Tilt.\\
+\textbf{Ending the Tilt:} The scene ends.\\
+\textbf{Ending the Tilt:} The Princess chooses to end the Tilt.}
+
+\Tilt{Silence}
+{The character is surounded by utter silence and will not make a noise. 
+
+\textbf{Effect:} The character's body will not make a noise, they can punch or run without fear of being overheard and not matter how much they try they cannot scream for help. The character can still make noise indirectly, such as by throwing a vase. \\
+\textbf{Ending the Tilt:} The duration ends.\\
+\textbf{Duration:} \fillunderline}
+
+\Tilt{Terrifying}
+{The character possess a fearful, almost certainly supernatural, aura that can drain the courage from even the most hardened warrior. Supernatural sources of fear can sometimes be idiosyncratic on who is affected. \\
+\textbf{Effect:} The first time a susceptible person lays eyes on the character they must roll Resolve + Composure. On a Failure they take the terrified Tilt.\\
+\textbf{Causing the Tilt:} This Tilt is usually created by some supernatural ability. \\
+\textbf{Ending the Tilt:} The scene ends.\\
+\textbf{Ending the Tilt:} The magic affecting your character fades.\\
+\textbf{Affected:} \fillunderline
+}
+
+\Tilt{Terrified}
+{Your character is in combat with something so terrifying that they can only think of fleeing. \\
+\textbf{Effect:} Your character must spend every turn moving at their maximum speed away from the source of their terror, if he is cornered he may stand and fight but only until an opportunity to escape presents itself.\\
+\textbf{Causing the Tilt:} Exposure to characters with the Terrifying Tilt causes this tilt.\\
+\textbf{Causing the Tilt:} Supernatural abilities can reach into the brain's fight or flight response to cause this Tilt.\\
+\textbf{Ending the Tilt:} Your character escapes. \\
+\textbf{Ending the Tilt:} The magic affecting your character fades. \\
+\textbf{People affected:} \fillunderline}
+
+\Tilt{Temporary Health}
+{Your character is under a pharmaceutical, psychological or magical influence which lets her to take damage beyond her normal limits and remain functional. 
+
+When the condition ends redistribute any damage according to the rules  for Temporary Health in WoD Core (p173) unless this condition has the Healing modifier, in that case remove any damage recorded in Temporary Health dots\\
+\textbf{Ending the tilt:} The human body cannot be pushed beyond it's limits for long. The extra health is temporary and will vanish in time. \\
+\textbf{Healing:} \underline{Y/N}}
+
+
+\Tilt{Willpower Blocked}
+{A magical force has prevented your character from spending Willpower. \\
+\textbf{Ending the Tilt:} The magic fades.
+\textbf{When can't you spend Willpower:} \fillunderline \\
+\textbf{Duration:} \_\_\_\_ \\
+\textbf{End trigger:}\fillunderline}
+
+\Tilt{Wreathed in Flame}
+{Your character is burning with a magical fire, she is unharmed nearby but others would be advised not to get too close. She should also avoid curtains, books and other flammable objects unless her fire is safe. 
+
+Unless the fire is Aggressive, damage from the flame dose not combine with attacks in close combat but the character may attempt to touch a target if the fire is more dangerous than a punch.\\
+\textbf{Causing the Tilt:} This Tilt is usually created by some supernatural ability. \\
+\textbf{Ending the Tilt:} The magic affecting your character fades. \\
+\textbf{Flame Size:}\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Flame Intensity:}\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\textbf{Duration:}\_\_\_\_\\
+\textbf{Safe:}\underline{Y/N}\\
+\textbf{Aggressive:}\underline{Y/N}}
+
+
+
+\end{document}
