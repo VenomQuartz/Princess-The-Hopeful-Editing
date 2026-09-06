@@ -1,0 +1,331 @@
+
+> %Editor: What does "If the Charm has a prerequisite on an Invocation" mean? Can it be reworded to "If the Charm's prequisites include an Invocation"? 
+
+Its any charm like (Learn OO, Acqua O), so the anwser is yes.
+
+> %Editor: Is "outrageous" meant to be "courageous"? Just seemed like the two adjectives of the grandma don't match. 
+
+In this context outrageous would rude, rulebreaking, the opposite of what you'd expect a polite and wise elder to be, but in a cool way. Think of the poem https://www.scottishpoetrylibrary.org.uk/poem/warning/. Or think of Nanny Ogg.
+
+> %Editor: "God Machine Chronicle" is talking about this book, right? https://archive.org/details/god-machine-chronicle/Chronicles%20of%20Darkness%20-%20The%20God-Machine%20Chronicle
+
+Yes
+
+> %Editor: "Hemingway" is longer than the gray box on the page. Anything that can be done about that, formatting-wise? 
+
+Probably, but I'd have to go back and check it (and others again) once all the updates are in. Remind me and I'll do it all at once then.
+
+> %Editor: Revised definition of Belief in the second sentence and added an aside sentence. Does this still capture the intended meaning? 
+
+I think it puts too much focus on Princesses not needing to cope with the supernatural when the important distinction is something else.
+
+Integrity is psychological health points, Belief is psychological armour points. If a mortal experiences something traumatic integrity goes down. If a Princess experiences something traumatic, Belief is unchanged and Shadows goes up. The more Belief you have, the more Shadows you can cope with.
+RESPONSE: Okay, I just reworded your response and put it in there. What do you think? 
+
+
+> %Editor: I wasn't sure I understood what the last sentence meant, and I left it untouched. (If nothing else, it is a run-on sentence.) I think it means "A Princess might feel very sad upon witnessing a personal tragedy, but she can contain the pain until after the emergency is over." Is that right? I can tweak the sentence if so. 
+
+You are correct. Contain the pain, power through it, the exact coping mechanism varies by the individual but that's the principle.
+
+> %Editor: Would you be interested in putting the Conditions into bulleted lists? It might look weird, but it'd make this paragraph much more readable, especially at a glance. 
+
+If its in the roll results section I'd prefer to avoid bullet lists, especially since there's two lists.
+
+
+> %Editor: I don't understand the difference between the paragon example ("If a Princess of Clubs fails to prevent violence...") and the first idealist example ("But if she came across two groups..."). Both seem to have a Princess's effort to integrate two communities cause violence. Please clarify. I'll make only small edits to this paragraph for now.  
+
+The difference between the two:
+
+Paragon: There is an issue that must be delt with -> Rather than taking the safe route, the princess tries to take the harder but more idealistic route for a better long term outcome -> she fails ->next time I'll take the safer more practical option.
+
+Medium: There is an issue that must be delt with -> The princess tries to improve things according to her ideals -> this makes things worse -> maybe the ideal itself is flawed. 
+
+The very core of the distinction is that Paragon compromises are when the Princess thinks "the ideal is right, but not practical in these situations", and Medium compromises are when the Princess thinks "maybe the ideal is wrong?". (The third tier of compromises are when the Princess acts in opposition to the ideal).
+RESPONSE: What do you think about this revision? 
+
+
+
+> %Editor: I don't understand this paragraph. The examples of the Diamonds and Spades Princesses don't seem to match with the first sentence. The first sentence is about differing ideals, while the examples seem to be about Princesses causing unintended harm. The last example, about the Champion, is phrased in such a way that it seems to be comparing itself to the other examples. I guess I'm asking for clarification on what the main point of this paragraph is, so we can focus it down. For now, doing only some light edits to it. 
+
+The paragraph is linking examples of ideals to their failures. A Princess of Spades wouldn't be risking compromise when she learns that not thinking things through isn't the answer, because she never believed that in the first place. A Princess of Diamonds would. The core point of that paragraph is that Princesses only risk loosing Belief when they break their own personal ideals rather than a list of specific actions. 
+
+Though you're unlikely to find any Radian Princess whose beliefs don't forbid things like murder; but they'll come at it from different ways. A Spade might say there's always a better solution if you think outside the box, a Heart might say the social cost of a Princess breaking the laws that underpin society will always outweighs any immediate benefit.
+RESPONSE: Okay, I went and just reworded your response and replaced the paragraph with it. I'm guessing that some part of the intended meaning was taken out, so please let me know how to improve on this. 
+
+
+
+> %Editor: Is "Oath" something you folks want to capitalize? Also, in the second-to-last sentence, "Most pragmatists and all idealists" implies that paragons DO NOT need to make a Compromise roll for stuff like torture and murder. I'm assuming that's not intended? 
+
+Oath refers to the three oaths of each calling, so yes to capitalization. 
+
+You assume correct about intent. Anything that's a compromise for one level is always a compromise for the belief levels above it.
+
+> %Editor: I think the three paragraphs in this section are long, unapproachable blocks of text. The section could do with some further dividing. Is there such a thing as a subsubsubsection? Was thinking we could put a heading on each one of the levels, and then we break each level's paragraph into multiple paragraphs (so that each level has two or more paragraphs). That would make the section an easier read. I've included the headers I had in mind, and I'll my best to format them. 
+
+If there's no subsubsection you can always fake it with a bold heading and an explicit line break.
+RESPONSE: Add bolding to the headings. Hopefully that'll look OK? 
+
+> %Editor: Was going to ignore this commented-out section, but I see that it gives useful info for Effects of Belief. The definition of Echoes is the biggest thing; it hasn't been defined since the introduction. Not sure what you wanted to do with this commented-out part, but, if nothing else, integrating parts of this paragraph into the rest of the section would be helpful. I'll leave this part untouched for now and won't edit out mentions of Echoes in the rest of the section, but this should be revisited. 
+
+Those rules have been replaced, you can see the replacement rule in Chapter 3 under Echoes.
+RESPONSE: Got it. However, Echoes are still mentioned multiple times in this chapter, and it'd be really good to have them defined again in the text. I've placed two lines from the commented-out part into the text and edited them. Let me know what you think about this. 
+
+
+> %Editor: I suggest linking to the section on Clashes of Wills on page 110, if that's possible. 
+
+It should be
+
+> %Editor: Splitting this paragraph up to make it easier to read. Also, the paragraph contradicts itself about whether embracing the Darkness is a choice. The first sentence says that it's a choice, but the mechanical explanation makes it sound like it's down to just a dice roll, with the player not having any input. Please clarify. 
+
+Its a choice by the character not the player, the dice roll determines what choice they make. 
+REPONSE: Added just a little bit to clarify this. Thoughts? 
+
+
+> %Editor: The second "Sensitivity" in this paragraph used to say "Sympathy," as in "Sympathy rolls made because of a mortal's..." From the context, it seemed like it meant "A Sensitivty roll, made in sympathy to a mortal's pain." Calling it a sympathy roll seemed confusing, so I changed it. If a sympathy roll is a specific thing, please change it back and let me know. 
+
+This is a correct change
+
+> %Editor: I'm not sure I understood what the last sentence means and tried splitting it in two and rewording it. Is this the intended meaning? 
+
+The meaning: If a Princess wants to gain a dot of mundane firearms. She could spend X hours in the mundane form at the firing range. Or she could spend X/2 hours training in the Dreamlands, then follow that up with X/2 hours training in her mundane form to transfer the skills across. So its X hours either way, but getting half the benefit early can have advantages (even if its just seeing your progress and feeling encouraged).
+RESPONSE: Okay, tried an edit with your clarification. Thoughts? 
+
+
+> %Editor: Previously, this said "experience point" instead of "Experiences." I changed it because it seemed like inconsistent terminology. Is "Experiences" the intended word? 
+
+Experience point or points is the correct wording. (In this example it is just one point)
+
+> %Editor: Two questions about this part. First, the fall of the Kingdoms isn't mentioned before this as a proper noun and rendered as "the Fall." Could we change it to something like "the fall of the Kingdoms"? Second, what is this paragraph (and future similar sections) describing? When Champions fall asleep, do they all dream dreams like the ones described here? If so, I think it'd be good to say that explicitly. One or two sentences at the start would do the trick. Thoughts? 
+
+This is describing dreams while sleep, but wasn't The Fall defined back in chapter one?
+
+RESPONSE: It doesn't look like "the Fall" specifically was defined in chapter one, just the fall of the Kingdoms. Very similar, but still different. I added one quick line at the end of a paragraph in chapter one (Paragraph starts with "The Kingdoms rallied and drove...", line 26) to define it. Hope you're okay with that fix. 
+Also, question: when Champions dream, do they ALWAYS have dreams like this? Or is it a sometimes thing? 
+
+> (check about the Fall. also check Experience(s)? ) I think this is supposed to be commented out?
+RESPONSE: Yep, that's my bad. Sorry! 
+
+> %Editor: Is the commented-out item something you want to restore? 
+
+Yeah, the deviant stereotypes were written in advance of the game's release and I forgot to uncomment them. But I'd have to add the missing ones first.
+RESPONSE: Got it. I'll leave that to you and keep all this commented out. 
+
+> %Editor: Would you consider changing the name of the Stereotype section (and other similar sections) to something like "How Champions See Others"? 
+
+Calling the section stereotypes is standard for all Chronicle of Darkness games. 
+RESPONSE: Dang, I should have known that. Sorry, never mind. 
+
+> %Editor: Would you be interested in adding the work the characters originate from in parentheses? For example, we could have "the Sailor Senshi (\textit{Sailor Moon])"
+
+Sure, that seems good to me.
+RESPONSE: Working on this, but I have encountered a new snag. Order of Japanese names in this text is (probably?) not consistent (i.e. sometimes, a Japanese name is given as surname-given name, and sometimes, it's given name-surname. You wouldn't happen to have already accounted for this in the text, would you? If not, any idea which is surname and given name in "Shoutan Himei"? 
+
+> %Editor: I'm not understanding the fourth sentence ("Graces force those around them to..."). Could you please clarify? Leaving that sentence untouched for now. 
+
+An example would be someone is an alcoholic in denial and their friends and family convince themselves its not an issue because that's easier, the Grace would say no you have to confront the problem and resolve it!
+RESPONSE: How do you feel about this revision? 
+
+> %Editor: It's not clear what "Many Seekers do both." is referring to in this paragraph. Please clarify. 
+
+There are three ways to be a seeker: Discover new knowledge, teach old knowledge to people who don't know it yet, or both.
+
+> %Editor: "Cataclysm" is used as a proper noun here, but it wasn't defined earlier, either in the body text or the lexicon. I assume the Cataclysm is the same thing as the Long Night. (By the way, I think "Long Night" should also be added to the lexicon.) Anyways, going to group this issue with the other comments I've made about the other Dreams of the Kingdom sections. I won't be able to make any real changes until I know for sure what these sections are supposed to be. 
+
+Cataclysm should be The Fall
+
+> %Editor: I don't understand what the second sentence is saying here. Who's "they," the books or the beasts? 
+
+They is the books. The beast is saying we're "ultimately good for the world because we teach lessons". The troubadour is replying that you can learn those lessons from story books, and the books are better because - unlike beasts - they don't also knife people in dark alleyways. 
+
+> %Editor: Wasn't sure why "Spirits" had an initial cap in the last sentence here, so I removed it. Revert if necessary. 
+
+Spirits, Ghosts, and Angels should be capitlaized in WoD books.
+RESPONSE: Are we talking WOD or NWOD? I'm working off of NWOD and I'm not seeing any of those three terms be capped. See Chronicles of Darkness, pg. 122, section "Ephemeral Beings" and Vampire: the Requiem, pg. 46, section "Our Practices." Where are you seeing that they should be capped? To be clear, I'm not talking about initial caps. 
+
+> %Editor: I was not able to find what Wisdom style was referring to in official books. Please elaborate. Also, are you interested in adding book and page numbers to the Merits to make them easier to find? 
+
+Good catch, it was renamed to Spiritual Temperance.
+RESPONSE: Great. I added a page number to Spiritual Temperance for easier reference, but I don't know how to link to it. Can you do that? 
+Also, I noticed that Direction Sense is NOT a Physical Merit, but a Mental one. And I'm actually having trouble with finding Natural Immunity. What book does it show up in? 
+
+> %Editor: I wasn't sure I understood the third sentence ("Either the Princess's..."). If it's not clear already, I am not actually very familiar with Chronicles of Darkness mechanically. Anyways, I tried rewording the third sentence. Please check if it's still says what you meant it to say. 
+
+I think it should use the technical term "contested action". Contested action is a type of dice roll, which in this case the Princess gets no successes on.
+RESPONSE: Just added "contested action" in the paragraph. What do you think? 
+
+> %Editor: Does "the Turtles find it easier to master than any other" mean the Turtles find this easier to master than other Invocations, or does it mean, compared to other Princesses, Turtles master Legno the easiest? 
+
+Both. The mechanic is that they pay fewer experience points for Legno. So Turtles master Legno easier than all other princesses trying to learn Legno, and they learn Legno easier than all other invocations.
+RESPONSE: Got it, I might leave the paragraph be. Where is it mentioned that Turtles pay less XP for Legno? I don't think I've seen it yet. 
+
+> %Editor: I think it'd be good to change this paragraph to be a bulleted list. The list would be much more readable. Thoughts? 
+
+I think its fine without a bulleted list here
+RESPONSE: It is fine, but I think it would be better as a list. This seems like something that would need to be referenced, and keeping the info as a paragraph makes it harder to quickly find what you need. Here, take a look at this mock-up of the list and let me know what you think. 
+
+Legno applies at no cost when a Princess is
+* targeting a living plant, wood, or natural, non-sapient animal with a Charm
+* restoring things to their natural state 
+* restraining the reckless
+* calming the fearful
+* finding a harmonious compromise
+* protecting against an attack
+* preventing or calming violence 
+* conserving and cultivating over time
+* influencing without drawing attention
+
+> %Editor: Significantly reworded third sentence. Please check if meaning was preserved. 
+
+It was
+
+Editor: I've mentioned this before, but I think having Diamonds Princesses be called Lights is confusing. I'm gonna leave instances alone here, but I really recommend removing it as a epithet. 
+RESPONSE: I don't see a reply on this, and I'm assuming that means no, but I wanted to check. I really do think it's easily confused. 
+
+> %Editor: I gotta say, the river/tributary metaphor is really good and quite clever. 
+
+Thank you :)
+
+> %Editor: Significantly reworded the first sentence. Please check. 
+
+Looks fine
+
+> %Editor: I think the use of "Hope-Engineers" here to refer to only Menders muddies the definition of both terms. I recommend replacing with just "These Menders." 
+
+I'm 50/50 on this, I don't mind. 
+
+> %Editor: I cut some parts of this paragraph. Check please. 
+
+I'd keep The Court welcomes anyone who believes in the value of thinking things through.
+
+> %Editor: I'm still not able to find what conversation styles are in any official books. Please clarify. Also, is large unit tactics a Merit? I can't find it in any official books, nor can I find it in this book. 
+
+The conversation styles are in the Princess book. Large unit tactics isn't a merit, but it is something Diamonds would gravitate too if it existed (well logically it would its just not been written up) and they could get command of large units.
+
+> %Editor: Brought up a similar thing before, about ambiguous wording in first sentence. Do Crystals master Acqua faster than other Princesses, or do Crystals master Acqua faster than other Invocations? 
+> %Editor: I think this is another paragraph that could benefit from being replaced by a bulleted list. Thoughts? 
+
+Same answer as last time.
+
+> %Editor: What's up with the two crowns referenced in the last sentence? What's the second crown? Why is the Queen referred to in the plural. 
+
+One crown is the Princess, the other is the Queen. 
+
+> %Editor: What mask is the queen wearing? 
+
+Whatever one she needs for the circumstances. In war she wears the mask of a perfect warrior queen, that sort of thing. Her natural personality is queenly, but she always behaves as the type of queen she's needed to be.
+
+> %Editor: Is the Prince's Calling that of a Champion, or is he just the queen's champion?  
+
+The later, his calling is Grace. (So's hers for the record)
+
+> %Editor: The differing use of Flowers and Gallants here implies that only Flowers replace bad traditions with good ones and only Gallants take traditions from past lives. I assume that wasn't the intention, so I replaced both with Jewels. 
+
+Works for me
+
+> %Editor: Changed second sentence. Please check meaning is still same. 
+
+It seems fine.
+
+> %Editor: I'm not understanding the meaning of the second sentence. Could you please reword? 
+
+She's saying that academic knowledge about psychology or politics just get in the way of meeting people and learning about them. 
+
+> %Editor: I tried rewording the last sentence, but I still don't really get what it means, especially the second clause. Please clarify. 
+
+Its saying that Knaves train themselves to easily see the kind of solution that most people never think of until someone does it and then everyone thinks it was obvious in hindsite.
+
+%Editor: Do you want to leave this bit commented out? 
+Yeah
+
+> %Editor: Sorry, this might be obvious to someone who knows the game better, but who/what is the last sentence referring to? The Princess? The barrier? Both? 
+
+The barrier, though it would be permement if the princess took damage too.
+
+%Editor: Is the suppression of Conditions and supernatural effects already well-defined in NWOD? If no, I think it should be defined here. Does suppressing an effect mean the effect goes away entirely, or does it mean the effect is lessened? 
+
+I think its well defined.
+RESPONSE: Having a hard time finding where it's defined. Can you point me to a book and page? I know abjuration is defined in COD pg. 140, but that doesn't seem to be quite the same. 
+
+%Editor: Is this line equating fire and humanity? Just asking in case we need to pluralize "thing." 
+
+It is equating
+
+%Editor: I'm not sure I understand the last sentence. Is the "instead" supposed to be there? If it's not there, I can get it. But "instead" trips me up. 
+
+They go on "girl underground" adventures (its a genre) instead of winding up next to wardens and getting locked up. Usually.
+RESPONSE: Could you reword that? I still don't get it. And I can't find anything about the girl underground genre, other than a specific book.
+
+%Editor: Here, when light is mentioned, is it THE Light, capital L Light, or is just the Beacon's goodness? Please be more precise. 
+
+Its capital L Light. But also the distinction between a Beacon's capital L Light and their general hope/empathy/goodness is extremely fuzzy and may not exist at all. 
+
+For Princesses there is more of a distinction, because their general hope/empathy/goodness reached a critical mass where their magic starts producing more magic.
+
+%Editor: What does it mean to transform a Bequest? 
+
+Bequests have two forms, an ordinary mundane object with no special abilities, and a magical item that has a built in spell. E.G. A bic lighter that transforms into a wand of fireball.
+
+%Editor: Reworded the clause about buying supernatural abiltiies. Is this the intended meaning, that Beacons can only buy two kinds of supernatural abilities?  
+
+Yes that's intended
+
+%Editor: Could you reword the second clause of the last sentence? A bit confused by it. 
+
+How about this:
+
+Reincarnated Princesses are born as Beacons before regaining their full powers. Most have the right attitude, and even if they don't, the Beacon template is a suitable representation of a Princess's dormant power. Reincarnated Princesses have no special advantages over other Beacons. However when determining if they can acquire a full supernatural template, they already count as though they were a Princess.
+
+> %Editor: This paragraph from the third sentence ("Other Sworn work closely...") onward seems confusing. My understanding of the sentences is this: Third sentence implies that there are Sworn that aren't given magic by Princesses but still work closely with them. This implication is followed through in the next sentence, about Sworn and their mundane abilities, but then that implication seems to be contradicted in the last sentence, about Sworn providing magical abilities. What exactly is trying to be said in these sentences? Leaving untouched for now.
+
+The idea is that there's two common roles of Sworn. The first is that a Princess finds a mortal whose doing really good work and invests to give them magical power. E.G. finding a top cancer researcher and making them Sworn so they can magically enhance their science skills. These Sworn usually carry on doing whatever they were doing before, now with magic.
+
+Then there's Sworn who join a Princess' adventuring party. The local Princesses are two Graces and a Troubadour, there's a darkspawn problem and they're over their head, but one of their dad's is ex-military, so they make him Sworn and give him magical gear to fight alongside them.
+
+I should actually mention a role that's not there: Sworn who handle a Princess' mundane stuff while she's busy adventuring. 
+
+> %Editor: I might be misunderstanding here, but I think everything after the second clause of the third sentence
+
+Yeah, that part doesn't need to go in the sworn section. Its more about politics than Sworn.
+
+> %Editor: Does this mean that Sworn need Princesses to show them a Crawlspace entrance every time they enter the Dreamlands, even if the Sworn has seen the Crawlspace before, or do Sworn only need to be shown new Crawlspaces? 
+
+Every time. Sworn can't reach the Dreamlands on their own. Thematically Sworn aren't "dreamers" like Princesses and Beacons, that's why they need an external magical charm to become Sworn.
+
+> %Editor: I don't understand what "reflected from her Light" means here. 
+
+Its referring to the way a Shikigami's power grows with the Inner Light of their Princess. 
+
+> %Editor: What does "similar results" mean here? 
+
+It means that like ones inhabiting toys, they also develop personality traits based on the body they inhabit. 
+
+(The whole thing is a justification for why Shikigami, who're mostly adult government officials from the kingdoms behave like mascots from a magical girl show; a lot of this section is modelled on Cerberus from Card Captor Sekura) 
+
+> %Editor: Changed "sever all ties to their bodies" to "sever all ties to their BODY." Was the plural intentional? Can a Shikigami possess multiple bodies in the waking world at once? 
+
+This was correct
+
+> %Editor: What does "not one for each kind of Beat" mean? 
+
+When a Princess fufills a Dream she gets one Beat and one Luminous Beat. However the Shikigami gains one Wisp, not two. 
+
+> %Editor: The second sentence in this paragraph makes it sound like Shikigami don't have their own Inner Light rating but instead just use their bonded Princess's rating, but the rest of the paragraph makes it sound like the Shikigami has its own Inner Light rating. For example, is the third sentence talking about a bonded Princess having an Inner Light of 1, or the Shikigami itself having the Inner Light of 1?  
+
+It should be referring to the Princess' Inner Light, Shikigami don't have it. 
+
+> %Editor: Had a tough time with this paragraph. Tried rewriting to smooth it out. Does it still mean what you want it to mean? 
+
+It does.
+
+> %Editor: I'm probably going to make a suggestion about changing either the name of Merit or the phenomenon, since they might be confused. Also, is it possible to link to the Merit here? I think I've figured out how to link to something else in the same doc, but not how to link to something else in another doc.  
+
+I'll have a look at linking.
+
+RESPONSE: Sounds good. Thoughts about the Merit and phenomenon White Rabbit? 
+
+> %Editor: Does "one weapons" mean having one dot in Weaponry? What does "damage zero" mean? 
+
+if you roll 3 successes to attack and have no weapon you do three bashing damage. But if you have a zero damage weapon you do three lethal damage, and if its a one damage weapon you do four lethal damage. 
+
+"damage zero or one weapons" is "damage zero" or "damage one".
+
